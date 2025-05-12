@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <title>Number System Calculator</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <div class="root">
+    <h1 class="title">Number System Calculator</h1>
+    <section>
+      <div class="option">
+        <div class="field">
+          <label id="inputType">Enter a number:</label>
+          <input type="text" id="input" value="0" onkeyup="update()" />
+        </div>
+
+        <div class="field">
+            <label>Convert to:</label>
+            <select id="typeTo" onchange="update()">
+              <option value="10">Decimal</option>
+              <option value="2">Binary</option>
+              <option value="8">Octal</option>
+              <option value="16">HexaDecimal</option>
+            </select>
+          </div>
+
+        <div class="field">
+          <label id="resultType">Result:</label>
+          <input type="text" id="res" value="0" readonly />
+        </div>
+
+        <p id="error" class="error-message"></p>
+      </div>
+    </section>
+  </div>
+  <script src="script.js"></script>
+</body>
+</html>

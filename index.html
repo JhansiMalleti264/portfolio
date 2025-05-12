@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <meta name="description" content="Jhansi Malleti - Creative UI/UX Designer crafting seamless web experiences.">
+  <title>Jhansi Malleti | UI/UX Designer</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <header>
+    <nav>
+      <div class="logo">Jhansi<span>Malleti</span></div>
+      <ul id="nav-links">
+        <li><a href="#home">Home</a></li>
+        <li><a href="#about">About</a></li>
+        <li><a href="#projects">Projects</a></li>
+        <li><a href="#skills">Skills</a></li>
+        <li><a href="#contact">Contact</a></li>
+      </ul>
+      <button id="theme-toggle">🌙</button>
+      <button id="menu-toggle" class="hamburger">☰</button>
+    </nav>
+  </header>
+
+  <section id="home">
+    <div class="hero centered">
+      <img src="profile.jpg" alt="Jhansi Malleti" class="profile-photo" />
+      <h1>Hello, I'm Jhansi Malleti</h1>
+      <h2>UI/UX Designer</h2>
+      <p>I create <span id="typing-text"></span><span class="cursor">|</span></p>
+      <div class="cta">
+        <a href="#projects" class="btn primary">View My Work</a>
+        <a href="#contact" class="btn secondary">Contact Me</a>
+      </div>
+    </div>
+  </section>
+  
+
+  <section id="about">
+    <h2>About Me</h2>
+    <div class="about-content">
+      <p>
+        I'm Jhansi Malleti, a passionate UI/UX Designer focused on crafting intuitive and elegant digital experiences.
+        I enjoy turning complex problems into simple, beautiful, and user-friendly designs. With a strong foundation in
+        HTML, CSS, JavaScript, and Figma, I bring concepts to life from wireframes to polished products.
+      </p>
+      
+  
+      <h3>Education</h3>
+      <ul class="education-list">
+        <li>
+          <strong>Bachelor of Technology in Computer Science</strong><br />
+          Anil Neerukonda Institute of Technology and Sciences, Visakhapatnam<br />
+          2021 - 2024
+        </li>
+        <li>
+          <strong>Diploma</strong><br />
+          Alwar Das Polytechnic, Visakhapatnam<br />
+          2018 - 2021
+        </li>
+        <li>
+          <strong>Secondary School Certificate (SSC)</strong><br />
+          Port High School, Visakhapatnam<br />
+          2017 - 2018
+        </li>
+      </ul>
+    </div>
+  </section>
+  
+
+  <section id="projects">
+    <h2>My Projects</h2>
+    <div class="project-grid">
+  
+      <div class="project-card">
+        <img src="media/palbg.webp" alt="Palindrome Checker" />
+        <div class="project-info">
+          <h3>Palindrome Checker</h3>
+          <p>A responsive web app that checks whether a given word or phrase is a palindrome, handling punctuation and spacing intelligently.</p>
+          <div class="tags">
+            <span>HTML</span>
+            <span>CSS</span>
+            <span>JavaScript</span>
+          </div>
+          <a href="projects/palindrome.html" target="_blank" class="btn primary">View Project</a>
+        </div>
+      </div>
+  
+      <div class="project-card">
+        <img src="media/quizbg.avif" alt="Quiz App" />
+        <div class="project-info">
+          <h3>Quiz App</h3>
+          <p>A simple quiz application with multiple choice questions and dynamic question loading.</p>
+          <div class="tags">
+            <span>HTML</span>
+            <span>CSS</span>
+            <span>JavaScript</span>
+          </div>
+          <a href="projects/quiz app/index.html" target="_blank" class="btn primary">View Project</a>
+        </div>
+      </div>
+      <div class="project-card">
+        <img src="media/nmbrbg.jpg" alt="Quiz App" />
+        <div class="project-info">
+          <h3>Number System Converter </h3>
+          <p>A Number System Converter is one that can be used to convert a number from one type to another type namely Decimals, Binary, Octal, and Hexadecimal.</p>
+          <div class="tags">
+            <span>HTML</span>
+            <span>CSS</span>
+            <span>JavaScript</span>
+          </div>
+          <a href="projects/nmbr converter/index.html" target="_blank" class="btn primary">View Project</a>
+        </div>
+      </div>
+  
+    </div>
+  </section>
+  
+  
+
+  <section id="skills">
+    <h2>My Skills</h2>
+    <div class="skills-container">
+      <div class="skill"><h3>HTML</h3><div class="progress-bar"><div class="progress" data-width="90"></div></div></div>
+      <div class="skill"><h3>CSS</h3><div class="progress-bar"><div class="progress" data-width="85"></div></div></div>
+      <div class="skill"><h3>JavaScript</h3><div class="progress-bar"><div class="progress" data-width="80"></div></div></div>
+      <div class="skill"><h3>Figma</h3><div class="progress-bar"><div class="progress" data-width="95"></div></div></div>
+      <div class="skill"><h3>Python</h3><div class="progress-bar"><div class="progress" data-width="75"></div></div></div>
+    </div>
+  </section>
+
+  <section id="contact">
+    <h2>Contact Me</h2>
+    <div class="contact-info">
+      <div class="contact-card"><h3>Email</h3><p>jhansimalleti654@gmail.com</p></div>
+      <div class="contact-card"><h3>Phone</h3><p>+91 9577777552</p></div>
+      <div class="contact-card"><h3>Location</h3><p>Visakhapatnam</p></div>
+    </div>
+    <form id="contact-form">
+      <input type="text" placeholder="Name" required />
+      <input type="email" placeholder="Email" required />
+      <textarea placeholder="Message" required></textarea>
+      <button type="submit" class="btn primary">Send Message</button>
+    </form>
+  </section>
+
+  <footer>
+    <p>&copy; 2025 Jhansi Malleti. All rights reserved.</p>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
