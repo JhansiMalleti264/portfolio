@@ -1,18 +1,3 @@
-const themeToggle = document.getElementById('theme-toggle');
-const prefersDark = window.matchMedia('(prefers-color-scheme: dark)');
-
-function setTheme(isDark) {
-  document.documentElement.setAttribute('data-theme', isDark ? 'dark' : 'light');
-  themeToggle.textContent = isDark ? '☀️' : '🌙';
-}
-
-themeToggle.addEventListener('click', () => {
-  const isDark = document.documentElement.getAttribute('data-theme') === 'dark';
-  setTheme(!isDark);
-});
-
-setTheme(prefersDark.matches);
-
 const typingText = document.getElementById('typing-text');
 const phrases = ['intuitive interfaces', 'seamless experiences', 'creative solutions'];
 let phraseIndex = 0, charIndex = 0, isDeleting = false;
