@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Number Guessing Game</title>
+    <style>
+        * {
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background: linear-gradient(135deg, #816555, #e9ecef);
+            color: #333;
+            width: 100%;
+            min-height: 100vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            padding: 40px 20px;
+        }
+
+        .container {
+            background-color: #af6c45;
+            padding: 20px 30px;
+            border-radius: 12px;
+            box-shadow: 0 8px 16px rgba(0, 0, 0, 0.1);
+            max-width: 500px;
+            width: 100%;
+            text-align: center;
+        }
+
+        h1 {
+            color: #16375a;
+            margin-bottom: 20px;
+        }
+
+        p {
+            font-size: 16px;
+            margin-bottom: 30px;
+        }
+
+        label {
+            display: block;
+            font-weight: 500;
+            margin-bottom: 8px;
+        }
+
+        input[type="text"] {
+            padding: 10px;
+            width: 80%;
+            max-width: 250px;
+            font-size: 16px;
+            border: 1px solid #494a58;
+            border-radius: 6px;
+            transition: border-color 0.3s ease;
+        }
+
+        input[type="text"]:focus {
+            outline: none;
+            border-color: #007bff;
+        }
+
+        .guessSubmit {
+            margin-top: 20px;
+            padding: 10px 24px;
+            font-size: 16px;
+            background-color: #1958b6;
+            color: white;
+            border: none;
+            border-radius: 6px;
+            cursor: pointer;
+            transition: background-color 0.3s ease;
+        }
+
+        .guessSubmit:hover {
+            background-color: #1f7a36;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <h1>Guess The Number</h1>
+        <p>Enter a number between 1 and 10. Lets see your guess is correct or not!</p>
+
+        <div class="form">
+            <label for="guessField">Enter a Guess:</label>
+            <input type="text" id="guessField" class="guessField">
+            <br>
+            <input type="submit" value="Submit Guess" class="guessSubmit" id="submitguess">
+        </div>
+    </div>
+
+    <script>
+        let y = Math.floor(Math.random() * 10 + 1);
+        let guess = 1;
+
+        document.getElementById("submitguess").onclick = function () {
+            let x = document.getElementById("guessField").value;
+
+            if (x == y) {
+                alert("CONGRATULATIONS! You guessed it right in " + guess + " guess(es)!");
+            } else if (x > y) {
+                guess++;
+                alert("OOPS! Try a smaller number.");
+            } else {
+                guess++;
+                alert("OOPS! Try a greater number.");
+            }
+        }
+    </script>
+</body>
+
+</html>
