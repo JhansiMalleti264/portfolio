@@ -85,7 +85,7 @@
   }
   
   #home {
-    background-image: url(bg.jpeg);
+    background-image: url(media/bg.avif);
     background-size: cover;
     /*background: #2A7B9B;
     background: linear-gradient(90deg, rgb(67, 73, 75) 0%, rgb(121, 139, 179) 50%, rgb(18, 26, 31) 100%);*/
