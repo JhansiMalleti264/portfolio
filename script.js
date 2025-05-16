@@ -39,9 +39,35 @@ document.getElementById('menu-toggle').addEventListener('click', () => {
   document.getElementById('nav-links').classList.toggle('show');
 });
 
-// Contact Form
+/*// Contact Form
 document.getElementById('contact-form').addEventListener('submit', (e) => {
   e.preventDefault();
   alert('Message sent successfully!');
   e.target.reset();
-});
+});*/
+const scriptURL = 'https://script.google.com/macros/s/AKfycbzMSrHzqsI1rTDFqqEC7mnOmryuHY82Lb0ypw8c8jiG7nvi96IId6h28NS0iLPoO_wtbA/exec'; // Replace with your deployment URL
+
+  document.getElementById('contact-form').addEventListener('submit', e => {
+    e.preventDefault();
+
+    const form = e.target;
+    const formData = new FormData(form);
+
+    fetch(scriptURL, {
+      method: 'POST',
+      body: formData
+    })
+    .then(response => response.json())
+    .then(data => {
+      if (data.result === 'success') {
+        alert('Message sent successfully!');
+        form.reset();
+      } else {
+        alert('Error: ' + data.error);
+      }
+    })
+    .catch(error => {
+      console.error('Error!', error.message);
+      alert('Failed to send message.');
+    });
+  });
