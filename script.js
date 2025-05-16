@@ -45,7 +45,7 @@ document.getElementById('contact-form').addEventListener('submit', (e) => {
   alert('Message sent successfully!');
   e.target.reset();
 });*/
-const scriptURL = 'https://script.google.com/macros/s/AKfycbzMSrHzqsI1rTDFqqEC7mnOmryuHY82Lb0ypw8c8jiG7nvi96IId6h28NS0iLPoO_wtbA/exec'; // Replace with your deployment URL
+const scriptURL = 'https://script.google.com/macros/library/d/1hW--Y2XBBDm_SbmZ4BpI6fEll4KiQ107ggS6IW3sdBvGcJyINJ3LwIax/1'; // Replace with your deployment URL
 
   document.getElementById('contact-form').addEventListener('submit', e => {
     e.preventDefault();
