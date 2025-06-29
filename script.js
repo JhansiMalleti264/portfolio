@@ -1,3 +1,8 @@
+// Resume button function
+function handleResumeView() {
+  window.open('new Jhansi_Resume_.pdf', '_blank');
+}
+
 // Typing Animation
 const typingText = document.getElementById('typing-text');
 const phrases = ['intuitive interfaces', 'seamless experiences', 'creative solutions'];
@@ -32,13 +37,9 @@ function typeEffect() {
 // Start typing animation after page load
 setTimeout(typeEffect, 1000);
 
-// Project Filtering
+// Project Filtering - Simplified Logic (No "All Projects" or "View More")
 const filterButtons = document.querySelectorAll('.filter-btn');
 const projectCards = document.querySelectorAll('.project-card');
-const viewMoreBtn = document.getElementById('view-more-btn');
-const viewMoreContainer = document.querySelector('.view-more-container');
-const hiddenProjects = document.querySelectorAll('.hidden-project');
-let showingAll = false;
 
 filterButtons.forEach(button => {
   button.addEventListener('click', () => {
@@ -49,34 +50,18 @@ filterButtons.forEach(button => {
     
     const filter = button.getAttribute('data-filter');
     
-    // Handle view more button and hidden projects based on filter
-    if (filter === 'all') {
-      viewMoreContainer.style.display = 'block';
-      // Reset to initial state when switching to "all"
-      hiddenProjects.forEach(project => {
-        project.classList.remove('show-hidden');
-      });
-      viewMoreBtn.textContent = 'View More Projects';
-      showingAll = false;
-    } else {
-      viewMoreContainer.style.display = 'none';
-      // Reset hidden projects state for other filters
-      hiddenProjects.forEach(project => {
-        project.classList.remove('show-hidden');
-      });
-      showingAll = false;
-    }
-    
     projectCards.forEach(card => {
       const categories = card.getAttribute('data-category').split(' ');
       
-      if (filter === 'all' || categories.includes(filter)) {
+      if (categories.includes(filter)) {
+        // Show projects that match the category
         card.classList.remove('hide');
         setTimeout(() => {
           card.style.opacity = '1';
           card.style.transform = 'scale(1)';
         }, 10);
       } else {
+        // Hide projects that don't match the category
         card.style.opacity = '0';
         card.style.transform = 'scale(0.8)';
         setTimeout(() => {
@@ -87,59 +72,13 @@ filterButtons.forEach(button => {
   });
 });
 
-// View More Projects Functionality
-viewMoreBtn.addEventListener('click', () => {
-  if (!showingAll) {
-    // Show hidden projects
-    hiddenProjects.forEach((project, index) => {
-      setTimeout(() => {
-        project.classList.add('show-hidden');
-        project.style.opacity = '0';
-        project.style.transform = 'scale(0.8)';
-        setTimeout(() => {
-          project.style.opacity = '1';
-          project.style.transform = 'scale(1)';
-        }, 50);
-      }, index * 100);
-    });
-    viewMoreBtn.textContent = 'Show Less';
-    showingAll = true;
-  } else {
-    // Hide projects
-    hiddenProjects.forEach((project, index) => {
-      setTimeout(() => {
-        project.style.opacity = '0';
-        project.style.transform = 'scale(0.8)';
-        setTimeout(() => {
-          project.classList.remove('show-hidden');
-        }, 300);
-      }, index * 50);
-    });
-    viewMoreBtn.textContent = 'View More Projects';
-    showingAll = false;
+// Initialize with first filter (Figma) active
+document.addEventListener('DOMContentLoaded', () => {
+  const firstFilter = document.querySelector('.filter-btn[data-filter="figma"]');
+  if (firstFilter) {
+    firstFilter.click();
   }
 });
-
-// Skills Animation with Intersection Observer
-const skillsSection = document.getElementById('skills');
-const progressBars = document.querySelectorAll('.progress');
-let skillsAnimated = false;
-
-const skillsObserver = new IntersectionObserver((entries) => {
-  entries.forEach(entry => {
-    if (entry.isIntersecting && !skillsAnimated) {
-      progressBars.forEach((progress, index) => {
-        const width = progress.getAttribute('data-width');
-        setTimeout(() => {
-          progress.style.width = `${width}%`;
-        }, index * 200);
-      });
-      skillsAnimated = true;
-    }
-  });
-}, { threshold: 0.3 });
-
-skillsObserver.observe(skillsSection);
 
 // Mobile Navigation Toggle
 const menuToggle = document.getElementById('menu-toggle');
@@ -197,10 +136,8 @@ document.querySelectorAll('a[href^="#"]').forEach(anchor => {
 window.addEventListener('scroll', () => {
   const header = document.querySelector('.header');
   if (window.scrollY > 100) {
-    header.style.background = 'rgba(26, 26, 26, 0.95)';
-    header.style.backdropFilter = 'blur(10px)';
+    header.classList.add('scrolled');
   } else {
-    header.style.background = 'var(--bg)';
-    header.style.backdropFilter = 'none';
+    header.classList.remove('scrolled');
   }
 });
