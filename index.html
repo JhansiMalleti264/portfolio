@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en" data-theme="dark">
+<html lang="en">
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
@@ -19,20 +19,24 @@
         <li><a href="#contact">Contact</a></li>
       </ul>
       <button class="menu-toggle" id="menu-toggle">
-        <span class="hamburger-line"></span>
-        <span class="hamburger-line"></span>
-        <span class="hamburger-line"></span>
+        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+          <line x1="3" y1="6" x2="21" y2="6"></line>
+          <line x1="3" y1="12" x2="21" y2="12"></line>
+          <line x1="3" y1="18" x2="21" y2="18"></line>
+        </svg>
       </button>
     </nav>
   </header>
 
   <section id="home" class="hero-section">
     <div class="hero-content">
-      <img 
-        src="profile.jpg" 
-        alt="Jhansi Malleti" 
-        class="profile-photo" 
-      />
+      <div class="profile-photo-container">
+        <img 
+          src="profile.jpg" 
+          alt="Jhansi Malleti" 
+          class="profile-photo" 
+        />
+      </div>
       <h1>Hello, I'm Jhansi Malleti</h1>
       <h2 class="hero-subtitle">UI/UX Designer</h2>
       <p class="typing-container">
@@ -54,6 +58,16 @@
           I enjoy turning complex problems into simple, beautiful, and user-friendly designs. With a strong foundation in
           HTML, CSS, JavaScript, and Figma. I bring concepts to life from wireframes to polished products.
         </p>
+        
+        <div class="resume-buttons">
+          <button onclick="handleResumeView()" class="btn primary resume-btn">
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+              <path d="M1 12s4-8 11-8 11 8 11 8-4 8-11 8-11-8-11-8z"></path>
+              <circle cx="12" cy="12" r="3"></circle>
+            </svg>
+            View Resume
+          </button>
+        </div>
         
         <h3>Education</h3>
         <div class="education-list">
@@ -82,9 +96,8 @@
       <h2>My Projects</h2>
       
       <div class="project-filters">
-        <button class="filter-btn active" data-filter="all">All Projects</button>
-        <button class="filter-btn" data-filter="figma">Figma</button>
-         <button class="filter-btn" data-filter="illustrator">Illustrator</button>
+        <button class="filter-btn active" data-filter="figma">Figma</button>
+        <button class="filter-btn" data-filter="illustrator">Illustrator</button>
         <button class="filter-btn" data-filter="photoshop">Photoshop</button>
         <button class="filter-btn" data-filter="html-css">HTML & CSS</button>
         <button class="filter-btn" data-filter="javascript">JavaScript</button>
@@ -93,24 +106,27 @@
       </div>
 
       <div class="project-grid" id="project-grid">
+        <!-- ILLUSTRATOR PROJECTS -->
         <div class="project-card" data-category="illustrator">
           <div class="project-image">
-            <img src="https://cdn.mos.cms.futurecdn.net/qfj7cU3bTy9NbjJQGJsm6n-1200-80.jpg" alt="flyer" />
+            <img src="https://cdn.mos.cms.futurecdn.net/qfj7cU3bTy9NbjJQGJsm6n-1200-80.jpg" alt="Flyers" />
             <div class="project-overlay">
-             <a href="#" target="_blank" rel="noopener noreferrer" class="project-link">
+              <a href="/projects/AI flyers.pdf" target="_blank" rel="noopener noreferrer" class="project-link">
                 <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
                   <path d="m7 7 10 10-5 5-5-5Z"/>
                   <path d="m13 7 6 6-6 6"/>
-                  <path d="m7 13 6 6-6 6"/></svg></a>
+                  <path d="m7 13 6 6-6 6"/>
+                </svg>
+              </a>
             </div>
           </div>
           <div class="project-info">
             <h3>Flyers</h3>
-            <p>Flyer is a piece of paper used to advertise or unform about a product, service, event, or idea.</p>
+            <p>Flyer is a piece of paper used to advertise or inform about a product, service, event, or idea.</p>
             <div class="project-tags">
               <span class="tag">Adobe Illustrator</span>
             </div>
-            <a href="projects/AI flyers.pdf" target="_blank" rel="noopener noreferrer" class="btn primary">
+            <a href="/projects/AI flyers.pdf" target="_blank" rel="noopener noreferrer" class="btn primary">
               View Project
             </a>
           </div>
@@ -120,11 +136,13 @@
           <div class="project-image">
             <img src="https://cdn.mos.cms.futurecdn.net/qfj7cU3bTy9NbjJQGJsm6n-1200-80.jpg" alt="Stationery" />
             <div class="project-overlay">
-             <a href="#" target="_blank" rel="noopener noreferrer" class="project-link">
+              <a href="/projects/wow mom stationery.pdf" target="_blank" rel="noopener noreferrer" class="project-link">
                 <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
                   <path d="m7 7 10 10-5 5-5-5Z"/>
                   <path d="m13 7 6 6-6 6"/>
-                  <path d="m7 13 6 6-6 6"/></svg></a>
+                  <path d="m7 13 6 6-6 6"/>
+                </svg>
+              </a>
             </div>
           </div>
           <div class="project-info">
@@ -133,20 +151,121 @@
             <div class="project-tags">
               <span class="tag">Adobe Illustrator</span>
             </div>
-            <a href="projects/wow mom stationery.pdf" target="_blank" rel="noopener noreferrer" class="btn primary">
+            <a href="/projects/wow mom stationery.pdf" target="_blank" rel="noopener noreferrer" class="btn primary">
+              View Project
+            </a>
+          </div>
+        </div>
+
+        <div class="project-card" data-category="illustrator">
+          <div class="project-image">
+            <img src="https://cdn.mos.cms.futurecdn.net/qfj7cU3bTy9NbjJQGJsm6n-1200-80.jpg" alt="Brand Guidelines" />
+            <div class="project-overlay">
+              <a href="/projects/brand guidlines.pdf" target="_blank" rel="noopener noreferrer" class="project-link">
+                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                  <path d="m7 7 10 10-5 5-5-5Z"/>
+                  <path d="m13 7 6 6-6 6"/>
+                  <path d="m7 13 6 6-6 6"/>
+                </svg>
+              </a>
+            </div>
+          </div>
+          <div class="project-info">
+            <h3>Brand Guidelines</h3>
+            <p>Brand Guidelines are clearly defined rules and standards that communicate how your brand should be represented to the world.</p>
+            <div class="project-tags">
+              <span class="tag">Adobe Illustrator</span>
+            </div>
+            <a href="/projects/brand guidlines.pdf" target="_blank" rel="noopener noreferrer" class="btn primary">
+              View Project
+            </a>
+          </div>
+        </div>
+
+        <!-- PHOTOSHOP PROJECTS -->
+        <div class="project-card" data-category="photoshop">
+          <div class="project-image">
+            <img src="https://www.tutkit.com/storage/media/packages/1110/1110-ki-in-photoshop-next-level-bildbearbeitung-mit-kuenstlicher-intelligenz-feat.jpg" alt="Clipping Mask" />
+            <div class="project-overlay">
+              <a href="/projects/clipping mask copy.pdf" target="_blank" rel="noopener noreferrer" class="project-link">
+                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                  <path d="m7 7 10 10-5 5-5-5Z"/>
+                  <path d="m13 7 6 6-6 6"/>
+                  <path d="m7 13 6 6-6 6"/>
+                </svg>
+              </a>
+            </div>
+          </div>
+          <div class="project-info">
+            <h3>Gif/Animation</h3>
+            <p>Flyer is a piece of paper used to advertise or inform about a product, service, event, or idea.</p>
+            <div class="project-tags">
+              <span class="tag">Adobe Photoshop</span>
+            </div>
+            <a href="/projects/life-cycle.gif" target="_blank" rel="noopener noreferrer" class="btn primary">
+              View Project
+            </a>
+          </div>
+        </div> 
+        <div class="project-card" data-category="photoshop">
+         <div class="project-image">
+            <img src="https://www.tutkit.com/storage/media/packages/1110/1110-ki-in-photoshop-next-level-bildbearbeitung-mit-kuenstlicher-intelligenz-feat.jpg" alt="Clipping Mask" />
+            <div class="project-overlay">
+              <a href="/projects/clipping mask copy.pdf" target="_blank" rel="noopener noreferrer" class="project-link">
+                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                  <path d="m7 7 10 10-5 5-5-5Z"/>
+                  <path d="m13 7 6 6-6 6"/>
+                  <path d="m7 13 6 6-6 6"/>
+                </svg>
+              </a>
+            </div>
+          </div>
+          <div class="project-info">
+            <h3>Music Event Stationery</h3>
+            <p>Business stationery refers to printed materials that businesses use for communication and branding purposes.</p>
+            <div class="project-tags">
+              <span class="tag">Adobe Photoshop</span>
+            </div>
+            <a href="/projects/music event stationery.pdf" target="_blank" rel="noopener noreferrer" class="btn primary">
+              View Project
+            </a>
+          </div>
+        </div>
+         <div class="project-card" data-category="photoshop">
+          <div class="project-image">
+            <img src="https://www.tutkit.com/storage/media/packages/1110/1110-ki-in-photoshop-next-level-bildbearbeitung-mit-kuenstlicher-intelligenz-feat.jpg" alt="Clipping Mask" />
+            <div class="project-overlay">
+              <a href="/projects/clipping mask copy.pdf" target="_blank" rel="noopener noreferrer" class="project-link">
+                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                  <path d="m7 7 10 10-5 5-5-5Z"/>
+                  <path d="m13 7 6 6-6 6"/>
+                  <path d="m7 13 6 6-6 6"/>
+                </svg>
+              </a>
+            </div>
+          </div>
+          <div class="project-info">
+            <h3>Flyers</h3>
+            <p>Flyer is a piece of paper used to advertise or inform about a product, service, event, or idea.</p>
+            <div class="project-tags">
+              <span class="tag">Adobe Photoshop</span>
+            </div>
+            <a href="/projects/Ps Flyer.pdf" target="_blank" rel="noopener noreferrer" class="btn primary">
               View Project
             </a>
           </div>
         </div>
         <div class="project-card" data-category="photoshop">
           <div class="project-image">
-            <img src="https://www.tutkit.com/storage/media/packages/1110/1110-ki-in-photoshop-next-level-bildbearbeitung-mit-kuenstlicher-intelligenz-feat.jpg" alt="clipping" />
+            <img src="https://www.tutkit.com/storage/media/packages/1110/1110-ki-in-photoshop-next-level-bildbearbeitung-mit-kuenstlicher-intelligenz-feat.jpg" alt="Clipping Mask" />
             <div class="project-overlay">
-             <a href="#" target="_blank" rel="noopener noreferrer" class="project-link">
+              <a href="/projects/clipping mask copy.pdf" target="_blank" rel="noopener noreferrer" class="project-link">
                 <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
                   <path d="m7 7 10 10-5 5-5-5Z"/>
                   <path d="m13 7 6 6-6 6"/>
-                  <path d="m7 13 6 6-6 6"/></svg></a>
+                  <path d="m7 13 6 6-6 6"/>
+                </svg>
+              </a>
             </div>
           </div>
           <div class="project-info">
@@ -155,17 +274,69 @@
             <div class="project-tags">
               <span class="tag">Adobe Photoshop</span>
             </div>
-            <a href="projects/clipping mask copy.pdf" target="_blank" rel="noopener noreferrer" class="btn primary">
+            <a href="/projects/clipping mask copy.pdf" target="_blank" rel="noopener noreferrer" class="btn primary">
               View Project
             </a>
           </div>
         </div>
 
-        <div class="project-card" data-category="html-css javascript">
+        <div class="project-card" data-category="photoshop">
           <div class="project-image">
-            <img src="media/palbg.webp" alt="Palindrome Checker" />
+            <img src="https://www.tutkit.com/storage/media/packages/1110/1110-ki-in-photoshop-next-level-bildbearbeitung-mit-kuenstlicher-intelligenz-feat.jpg" alt="Adaptation" />
             <div class="project-overlay">
-              <a href="#" target="_blank" rel="noopener noreferrer" class="project-link">
+              <a href="/projects/adaptation.pdf" target="_blank" rel="noopener noreferrer" class="project-link">
+                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                  <path d="m7 7 10 10-5 5-5-5Z"/>
+                  <path d="m13 7 6 6-6 6"/>
+                  <path d="m7 13 6 6-6 6"/>
+                </svg>
+              </a>
+            </div>
+          </div>
+          <div class="project-info">
+            <h3>Adaptation</h3>
+            <p>Business stationery refers to printed materials that businesses use for communication and branding purposes.</p>
+            <div class="project-tags">
+              <span class="tag">Adobe Photoshop</span>
+            </div>
+            <a href="/projects/adaptation.pdf" target="_blank" rel="noopener noreferrer" class="btn primary">
+              View Project
+            </a>
+          </div>
+        </div>
+        <!-- HTML, CSS PROJECTS -->
+        <div class="project-card" data-category="html-css">
+          <div class="project-image">
+            <img src="https://img.freepik.com/premium-vector/set-juicy-apples-red-green-color-whole-slice-summer-fruit-collection_647443-666.jpg?semt=ais_hybrid&w=740" alt="fruitshop" />
+            <div class="project-overlay">
+              <a href="https://jhansimalleti264.github.io/Fruit-Shop-Landing-Page-Html/" target="_blank" rel="noopener noreferrer" class="project-link">
+                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                  <path d="m7 7 10 10-5 5-5-5Z"/>
+                  <path d="m13 7 6 6-6 6"/>
+                  <path d="m7 13 6 6-6 6"/>
+                </svg>
+              </a>
+            </div>
+          </div>
+          <div class="project-info">
+            <h3>Fruit Shop Landing Page</h3>
+            <p>A fruit shop landing page should be visually appealing and easy to navigate, with clear calls to action and product showcases.</p>
+            <div class="project-tags">
+              <span class="tag">HTML</span>
+              <span class="tag">CSS</span>
+              <span class="tag">JavaScript</span>
+            </div>
+            <a href="https://jhansimalleti264.github.io/Palindrome/" target="_blank" rel="noopener noreferrer" class="btn primary">
+              View Project
+            </a>
+          </div>
+        </div>
+        <!-- JAVASCRIPT PROJECTS -->
+        <div class="project-card" data-category="javascript">
+          <div class="project-image">
+            <img src="https://i.ytimg.com/vi/NfKp30TfSGM/sddefault.jpg" alt="Palindrome Checker" />
+            <div class="project-overlay">
+              <a href="https://jhansimalleti264.github.io/Palindrome/" target="_blank" rel="noopener noreferrer" class="project-link">
                 <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
                   <path d="m7 7 10 10-5 5-5-5Z"/>
                   <path d="m13 7 6 6-6 6"/>
@@ -188,33 +359,11 @@
           </div>
         </div>
 
-        <div class="project-card" data-category="photoshop">
+        <div class="project-card" data-category="javascript">
           <div class="project-image">
-            <img src="https://www.tutkit.com/storage/media/packages/1110/1110-ki-in-photoshop-next-level-bildbearbeitung-mit-kuenstlicher-intelligenz-feat.jpg" alt="brand Guidelines" />
+            <img src="https://images.pexels.com/photos/5428836/pexels-photo-5428836.jpeg" alt="Quiz App" />
             <div class="project-overlay">
-             <a href="#" target="_blank" rel="noopener noreferrer" class="project-link">
-                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-                  <path d="m7 7 10 10-5 5-5-5Z"/>
-                  <path d="m13 7 6 6-6 6"/>
-                  <path d="m7 13 6 6-6 6"/></svg></a>
-            </div>
-          </div>
-          <div class="project-info">
-            <h3>Adaptation</h3>
-            <p>Business stationery refers to printed materials that businesses use for communication and branding purposes.</p>
-            <div class="project-tags">
-              <span class="tag">Adobe Photoshop</span>
-            </div>
-            <a href="projects/adaptation.pdf" target="_blank" rel="noopener noreferrer" class="btn primary">
-              View Project
-            </a>
-          </div>
-        </div>
-        <div class="project-card" data-category="html-css javascript">
-          <div class="project-image">
-            <img src="media/quizbg.avif" alt="Quiz App" />
-            <div class="project-overlay">
-              <a href="#" target="_blank" rel="noopener noreferrer" class="project-link">
+              <a href="https://jhansimalleti264.github.io/Quiz/" target="_blank" rel="noopener noreferrer" class="project-link">
                 <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
                   <path d="m7 7 10 10-5 5-5-5Z"/>
                   <path d="m13 7 6 6-6 6"/>
@@ -237,103 +386,11 @@
           </div>
         </div>
 
-        <div class="project-card" data-category="illustrator">
+        <div class="project-card" data-category="javascript">
           <div class="project-image">
-            <img src="https://cdn.mos.cms.futurecdn.net/qfj7cU3bTy9NbjJQGJsm6n-1200-80.jpg" alt="brand Guidelines" />
+            <img src="https://images.pexels.com/photos/574071/pexels-photo-574071.jpeg" alt="Number System Converter" />
             <div class="project-overlay">
-             <a href="#" target="_blank" rel="noopener noreferrer" class="project-link">
-                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-                  <path d="m7 7 10 10-5 5-5-5Z"/>
-                  <path d="m13 7 6 6-6 6"/>
-                  <path d="m7 13 6 6-6 6"/></svg></a>
-            </div>
-          </div>
-          <div class="project-info">
-            <h3>Brand Guidelines</h3>
-            <p>Brand Guidelines are clearly defined rules and standards that communicate how your brand should be represented to the world.</p>
-            <div class="project-tags">
-              <span class="tag">Adobe Illustrator</span>
-            </div>
-            <a href="projects/brand guidlines.pdf" target="_blank" rel="noopener noreferrer" class="btn primary">
-              View Project
-            </a>
-          </div>
-        </div>
-
-        <div class="project-card" data-category="photoshop">
-          <div class="project-image">
-            <img src="https://www.tutkit.com/storage/media/packages/1110/1110-ki-in-photoshop-next-level-bildbearbeitung-mit-kuenstlicher-intelligenz-feat.jpg" alt="brand Guidelines" />
-            <div class="project-overlay">
-             <a href="#" target="_blank" rel="noopener noreferrer" class="project-link">
-                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-                  <path d="m7 7 10 10-5 5-5-5Z"/>
-                  <path d="m13 7 6 6-6 6"/>
-                  <path d="m7 13 6 6-6 6"/></svg></a>
-            </div>
-          </div>
-          <div class="project-info">
-            <h3>Stationery</h3>
-            <p>Business stationery refers to printed materials that businesses use for communication and branding purposes.</p>
-            <div class="project-tags">
-              <span class="tag">Adobe Photoshop</span>
-            </div>
-            <a href="projects/music event stationery.pdf" target="_blank" rel="noopener noreferrer" class="btn primary">
-              View Project
-            </a>
-          </div>
-        </div>
-
-
-        <div class="project-card" data-category="photoshop">
-          <div class="project-image">
-            <img src="https://www.tutkit.com/storage/media/packages/1110/1110-ki-in-photoshop-next-level-bildbearbeitung-mit-kuenstlicher-intelligenz-feat.jpg" alt="brand Guidelines" />
-            <div class="project-overlay">
-             <a href="#" target="_blank" rel="noopener noreferrer" class="project-link">
-                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-                  <path d="m7 7 10 10-5 5-5-5Z"/>
-                  <path d="m13 7 6 6-6 6"/>
-                  <path d="m7 13 6 6-6 6"/></svg></a>
-            </div>
-          </div>
-          <div class="project-info">
-            <h3>Flyers</h3>
-            <p>Flyer is a piece of paper used to advertise or unform about a product, service, event, or idea.</p>
-            <div class="project-tags">
-              <span class="tag">Adobe Photoshop</span>
-            </div>
-            <a href="projects/Ps Flyer.pdf" target="_blank" rel="noopener noreferrer" class="btn primary">
-              View Project
-            </a>
-          </div>
-        </div>
-
-        <div class="project-card" data-category="photoshop">
-          <div class="project-image">
-            <img src="https://www.tutkit.com/storage/media/packages/1110/1110-ki-in-photoshop-next-level-bildbearbeitung-mit-kuenstlicher-intelligenz-feat.jpg" alt="brand Guidelines" />
-            <div class="project-overlay">
-             <a href="#" target="_blank" rel="noopener noreferrer" class="project-link">
-                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-                  <path d="m7 7 10 10-5 5-5-5Z"/>
-                  <path d="m13 7 6 6-6 6"/>
-                  <path d="m7 13 6 6-6 6"/></svg></a>
-            </div>
-          </div>
-          <div class="project-info">
-            <h3>Animation/Gif</h3>
-            <p>GIFs are short, animated visual loops that have conquered social networks.</p>
-            <div class="project-tags">
-              <span class="tag">Adobe Photoshop</span>
-            </div>
-            <a href="projects/life-cycle.gif" target="_blank" rel="noopener noreferrer" class="btn primary">
-              View Project
-            </a>
-          </div>
-        </div>
-        <div class="project-card" data-category="html-css javascript">
-          <div class="project-image">
-            <img src="media/nmbrbg.jpg" alt="nmbr Converter" />
-            <div class="project-overlay">
-              <a href="#" target="_blank" rel="noopener noreferrer" class="project-link">
+              <a href="https://jhansimalleti264.github.io/Number-Converter/" target="_blank" rel="noopener noreferrer" class="project-link">
                 <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
                   <path d="m7 7 10 10-5 5-5-5Z"/>
                   <path d="m13 7 6 6-6 6"/>
@@ -343,7 +400,7 @@
             </div>
           </div>
           <div class="project-info">
-             <h3>Number System Converter </h3>
+            <h3>Number System Converter</h3>
             <p>A Number System Converter is one that can be used to convert a number from one type to another type namely Decimals, Binary, Octal, and Hexadecimal.</p>
             <div class="project-tags">
               <span class="tag">HTML</span>
@@ -355,11 +412,40 @@
             </a>
           </div>
         </div>
+
+       <!-- <div class="project-card" data-category="javascript">
+          <div class="project-image">
+            <img src="https://images.pexels.com/photos/163064/play-stone-network-networked-interactive-163064.jpeg" alt="Number Guessing Game" />
+            <div class="project-overlay">
+              <a href="https://jhansimalleti264.github.io/Number-Guessing-Game/" target="_blank" rel="noopener noreferrer" class="project-link">
+                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                  <path d="m7 7 10 10-5 5-5-5Z"/>
+                  <path d="m13 7 6 6-6 6"/>
+                  <path d="m7 13 6 6-6 6"/>
+                </svg>
+              </a>
+            </div>
+          </div>
+          <div class="project-info">
+            <h3>Number Guessing Game</h3>
+            <p>A Number Guessing Game is a simple game where the player tries to guess a randomly generated number within a specified range.</p>
+            <div class="project-tags">
+              <span class="tag">HTML</span>
+              <span class="tag">CSS</span>
+              <span class="tag">JavaScript</span>
+            </div>
+            <a href="https://jhansimalleti264.github.io/Number-Guessing-Game/" target="_blank" rel="noopener noreferrer" class="btn primary">
+              View Project
+            </a>
+          </div>
+        </div>-->
+
+        <!-- BOOTSTRAP PROJECTS -->
         <div class="project-card" data-category="bootstrap">
           <div class="project-image">
-            <img src="media/career.jpg" alt="Bootstrap Job Portal" />
+            <img src="https://images.pexels.com/photos/3184465/pexels-photo-3184465.jpeg" alt="Bootstrap Job Portal" />
             <div class="project-overlay">
-              <a href="#" target="_blank" rel="noopener noreferrer" class="project-link">
+              <a href="https://jhansimalleti264.github.io/Bootstrap/" target="_blank" rel="noopener noreferrer" class="project-link">
                 <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
                   <path d="m7 7 10 10-5 5-5-5Z"/>
                   <path d="m13 7 6 6-6 6"/>
@@ -382,9 +468,10 @@
           </div>
         </div>
 
+        <!-- WORDPRESS PROJECTS -->
         <div class="project-card" data-category="wordpress">
           <div class="project-image">
-            <img src="https://images.pexels.com/photos/270408/pexels-photo-270408.jpeg" alt="Tech Mahindra Blog Theme" />
+            <img src="https://etimg.etb2bimg.com/photo/111601246.cms" alt="Tech Mahindra Blog Theme" />
             <div class="project-overlay">
               <a href="https://dev-jhansi-malleti.pantheonsite.io/" target="_blank" rel="noopener noreferrer" class="project-link">
                 <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
@@ -407,86 +494,6 @@
             </a>
           </div>
         </div>
-
-        <!-- Hidden projects that will be shown when "View More" is clicked -->
-        <div class="project-card hidden-project" data-category="illustrator">
-          <div class="project-image">
-            <img src="https://cdn.mos.cms.futurecdn.net/qfj7cU3bTy9NbjJQGJsm6n-1200-80.jpg" alt="BG" />
-            <div class="project-overlay">
-             <a href="#" target="_blank" rel="noopener noreferrer" class="project-link">
-                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-                  <path d="m7 7 10 10-5 5-5-5Z"/>
-                  <path d="m13 7 6 6-6 6"/>
-                  <path d="m7 13 6 6-6 6"/></svg></a>
-            </div>
-          </div>
-          <div class="project-info">
-            <h3>Brand Guidelines</h3>
-            <p>Brand Guidelines are clearly defined rules and standards that communicate how your brand should be represented to the world.</p>
-            <div class="project-tags">
-              <span class="tag">Adobe Illustrator</span>
-            </div>
-            <a href="projects/brand guidlines.pdf" target="_blank" rel="noopener noreferrer" class="btn primary">
-              View Project
-            </a>
-          </div>
-        </div>
-        <div class="project-card hidden-project" data-category="photoshop">
-          <div class="project-image">
-            <img src="https://cdn.mos.cms.futurecdn.net/qfj7cU3bTy9NbjJQGJsm6n-1200-80.jpg" alt="BG" />
-            <div class="project-overlay">
-             <a href="#" target="_blank" rel="noopener noreferrer" class="project-link">
-                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-                  <path d="m7 7 10 10-5 5-5-5Z"/>
-                  <path d="m13 7 6 6-6 6"/>
-                  <path d="m7 13 6 6-6 6"/></svg></a>
-            </div>
-          </div>
-          <div class="project-info">
-            <h3>Adaptation</h3>
-            <p>A branding kit is an essential toolbox that contains visual elements that make your brand unique. It includes your brand colors, logo, fonts, and other design elements like patterns and illustrations.</p>
-            <div class="project-tags">
-              <span class="tag">Adobe Illustrator</span>
-            </div>
-            <a href="projects/adaptation.pdf" target="_blank" rel="noopener noreferrer" class="btn primary">
-              View Project
-            </a>
-          </div>
-        </div>
-
-        
-        <div class="project-card hidden-project" data-category="html-css javascript">
-          <div class="project-image">
-            <img src="media/guessbg.jpg" alt="Number Guessing Game" />
-            <div class="project-overlay">
-              <a href="#" target="_blank" rel="noopener noreferrer" class="project-link">
-                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-                  <path d="m7 7 10 10-5 5-5-5Z"/>
-                  <path d="m13 7 6 6-6 6"/>
-                  <path d="m7 13 6 6-6 6"/>
-                </svg>
-              </a>
-            </div>
-          </div>
-          <div class="project-info">
-            <h3>Number Guessing Game</h3>
-            <p>A Number Guessing Game is a simple game where the player tries to guess a randomly generated number within a specified range.</p>
-            <div class="project-tags">
-              <span class="tag">HTML</span>
-              <span class="tag">CSS</span>
-              <span class="tag">JavaScript</span>
-            </div>
-            <a href="https://jhansimalleti264.github.io/Number-Guessing-Game/" target="_blank" rel="noopener noreferrer" class="btn primary">
-              View Project
-            </a>
-          </div>
-        </div>
-
-    
-
-      <!-- View More Button -->
-      <div class="view-more-container">
-        <button id="view-more-btn" class="btn primary view-more-btn">View More Projects</button>
       </div>
     </div>
   </section>
@@ -494,55 +501,15 @@
   <section id="skills" class="skills-section">
     <div class="container">
       <h2>My Skills</h2>
-      <div class="skills-container">
-        <div class="skill">
-          <h3>HTML <span class="skill-percentage">90%</span></h3>
-          <div class="progress-bar">
-            <div class="progress" data-width="90"></div>
-          </div>
-        </div>
-        <div class="skill">
-          <h3>CSS <span class="skill-percentage">80%</span></h3>
-          <div class="progress-bar">
-            <div class="progress" data-width="80"></div>
-          </div>
-        </div>
-        <div class="skill">
-          <h3>JavaScript <span class="skill-percentage">60%</span></h3>
-          <div class="progress-bar">
-            <div class="progress" data-width="60"></div>
-          </div>
-        </div>
-        <div class="skill">
-          <h3>Figma <span class="skill-percentage">95%</span></h3>
-          <div class="progress-bar">
-            <div class="progress" data-width="95"></div>
-          </div>
-        </div>
-        <div class="skill">
-          <h3>Illustrator <span class="skill-percentage">80%</span></h3>
-          <div class="progress-bar">
-            <div class="progress" data-width="80"></div>
-          </div>
-        </div>
-        <div class="skill">
-          <h3>Photoshop <span class="skill-percentage">75%</span></h3>
-          <div class="progress-bar">
-            <div class="progress" data-width="80"></div>
-          </div>
-        </div>
-        <div class="skill">
-          <h3>WordPress <span class="skill-percentage">70%</span></h3>
-          <div class="progress-bar">
-            <div class="progress" data-width="80"></div>
-          </div>
-        </div>
-        <div class="skill">
-          <h3>Python <span class="skill-percentage">75%</span></h3>
-          <div class="progress-bar">
-            <div class="progress" data-width="75"></div>
-          </div>
-        </div>
+      <div class="skills-grid-simple">
+        <div class="skill-card-simple">HTML</div>
+        <div class="skill-card-simple">CSS</div>
+        <div class="skill-card-simple">JavaScript</div>
+        <div class="skill-card-simple">Figma</div>
+        <div class="skill-card-simple">Illustrator</div>
+        <div class="skill-card-simple">Photoshop</div>
+        <div class="skill-card-simple">WordPress</div>
+        <div class="skill-card-simple">Python</div>
       </div>
     </div>
   </section>
