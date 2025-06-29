@@ -1,6 +1,6 @@
 // Resume button function
 function handleResumeView() {
-  window.open('new Jhansi_Resume_.pdf', '_blank');
+  window.open('jhansi resume .pdf', '_blank');
 }
 
 // Typing Animation
