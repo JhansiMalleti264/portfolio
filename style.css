@@ -5,6 +5,17 @@
   --bg: #1a1a1a;
   --card-bg: #2a2a2a;
   --shadow: rgba(0, 0, 0, 0.3);
+
+  /* Skill colors */
+  --html-color: #E34F26;
+  --css-color: #1572B6;
+  --js-color: #F7DF1E;
+  --figma-color: #F24E1E;
+  --illustrator-color: #FF9A00;
+  --photoshop-color: #31A8FF;
+  --wordpress-color: #21759B;
+  --python-color: #3776AB;
+   --bootstrap-color: #7952B3;
 }
 
 * {
@@ -488,40 +499,6 @@ h3 {
   box-shadow: 0 8px 25px rgba(0, 119, 255, 0.4);
 }
 
-/* Skills Section - Design 1 Only */
-.skills-section {
-  background: var(--card-bg);
-  padding: 5rem 0;
-}
-
-.skills-grid-simple {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
-  gap: 1.5rem;
-  max-width: 800px;
-  margin: 0 auto;
-}
-
-.skill-card-simple {
-  background: var(--bg);
-  padding: 2rem 1rem;
-  border-radius: 12px;
-  text-align: center;
-  font-weight: 600;
-  font-size: 1.1rem;
-  color: var(--text);
-  transition: all 0.3s ease;
-  box-shadow: 0 4px 15px var(--shadow);
-  border: 2px solid transparent;
-}
-
-.skill-card-simple:hover {
-  transform: translateY(-5px);
-  border-color: var(--primary);
-  box-shadow: 0 8px 25px var(--shadow);
-  color: var(--primary);
-}
-
 /* Contact Section */
 .contact-section {
   background: var(--bg);
@@ -823,4 +800,215 @@ h3 {
   .footer p {
     font-size: 0.8rem;
   }
+}
+
+/* Skills Section with Icons */
+.skills-section {
+  background: var(--card-bg);
+  padding: 5rem 0;
+}
+
+.skills-grid-with-icons {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+  gap: 2rem;
+  max-width: 1000px;
+  margin: 0 auto;
+}
+
+.skill-card-with-icon {
+  background: var(--bg);
+  padding: 2rem 1.5rem;
+  border-radius: 16px;
+  text-align: center;
+  transition: all 0.3s ease;
+  box-shadow: 0 4px 15px var(--shadow);
+  border: 2px solid transparent;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 1rem;
+  position: relative;
+  overflow: hidden;
+}
+
+.skill-card-with-icon::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 4px;
+  background: var(--primary);
+  transform: scaleX(0);
+  transition: transform 0.3s ease;
+}
+
+.skill-card-with-icon:hover::before {
+  transform: scaleX(1);
+}
+
+.skill-card-with-icon:hover {
+  transform: translateY(-8px);
+  border-color: var(--primary);
+  box-shadow: 0 12px 30px var(--shadow);
+}
+
+.skill-icon-container {
+  width: 60px;
+  height: 60px;
+  border-radius: 50%;
+  background: linear-gradient(135deg, var(--primary), var(--secondary));
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: all 0.3s ease;
+  position: relative;
+}
+
+.skill-card-with-icon:hover .skill-icon-container {
+  transform: scale(1.1);
+  box-shadow: 0 8px 20px rgba(0, 119, 255, 0.4);
+}
+
+.skill-icon {
+  color: white;
+  transition: all 0.3s ease;
+}
+
+.skill-name {
+  font-weight: 600;
+  font-size: 1.1rem;
+  color: var(--text);
+  transition: color 0.3s ease;
+}
+
+.skill-card-with-icon:hover .skill-name {
+  color: var(--primary);
+}
+
+/* Adobe brand styling for Illustrator and Photoshop */
+.skill-card-with-icon[data-skill="illustrator"] .skill-icon-container {
+  background: linear-gradient(135deg, #FF9A00, #FF6600);
+  border-radius: 20%;
+}
+
+.skill-card-with-icon[data-skill="illustrator"] .skill-icon {
+  font-family: 'Arial', sans-serif;
+  font-weight: bold;
+  font-size: 24px;
+  color: white;
+}
+
+.skill-card-with-icon[data-skill="photoshop"] .skill-icon-container {
+  background: linear-gradient(135deg, #31A8FF, #0078D4);
+  border-radius: 20%;
+}
+
+.skill-card-with-icon[data-skill="photoshop"] .skill-icon {
+  font-family: 'Arial', sans-serif;
+  font-weight: bold;
+  font-size: 24px;
+  color: white;
+}
+
+/* Figma original brand colors */
+.skill-card-with-icon[data-skill="figma"] .skill-icon-container {
+  background: linear-gradient(135deg, #F24E1E, #FF7262, #A259FF, #1ABCFE, #0ACF83);
+  border-radius: 50%;
+}
+
+/* Bootstrap brand styling */
+.skill-card-with-icon[data-skill="bootstrap"] .skill-icon-container {
+  background: linear-gradient(135deg, var(--bootstrap-color), #9a6dd7);
+  border-radius: 20%;
+}
+
+.skill-card-with-icon[data-skill="bootstrap"] .skill-icon {
+  font-family: 'Arial', sans-serif;
+  font-weight: bold;
+  font-size: 20px;
+  color: white;
+}
+
+/* Specific skill colors */
+.skill-card-with-icon[data-skill="html"] .skill-icon-container {
+  background: linear-gradient(135deg, var(--html-color), #ff6b35);
+}
+
+.skill-card-with-icon[data-skill="css"] .skill-icon-container {
+  background: linear-gradient(135deg, var(--css-color), #4fc3f7);
+}
+
+.skill-card-with-icon[data-skill="javascript"] .skill-icon-container {
+  background: linear-gradient(135deg, var(--js-color), #ffeb3b);
+}
+
+.skill-card-with-icon[data-skill="javascript"] .skill-icon {
+  color: #333;
+}
+
+.skill-card-with-icon[data-skill="wordpress"] .skill-icon-container {
+  background: linear-gradient(135deg, var(--wordpress-color), #4db6ac);
+}
+
+.skill-card-with-icon[data-skill="python"] .skill-icon-container {
+  background: linear-gradient(135deg, var(--python-color), #42a5f5);
+}
+
+
+/* Adobe brand styling for Illustrator and Photoshop */
+.skill-card-with-icon[data-skill="illustrator"] .skill-icon-container {
+  background: linear-gradient(135deg, #FF9A00, #FF6600);
+  border-radius: 20%;
+}
+
+.skill-card-with-icon[data-skill="illustrator"] .skill-icon {
+  font-family: 'Arial', sans-serif;
+  font-weight: bold;
+  font-size: 24px;
+  color: white;
+}
+
+.skill-card-with-icon[data-skill="photoshop"] .skill-icon-container {
+  background: linear-gradient(135deg, #31A8FF, #0078D4);
+  border-radius: 20%;
+}
+
+.skill-card-with-icon[data-skill="photoshop"] .skill-icon {
+  font-family: 'Arial', sans-serif;
+  font-weight: bold;
+  font-size: 24px;
+  color: white;
+}
+
+/* Figma original brand colors */
+.skill-card-with-icon[data-skill="figma"] .skill-icon-container {
+  background: linear-gradient(135deg, #F24E1E, #FF7262, #A259FF, #1ABCFE, #0ACF83);
+  border-radius: 50%;
+}
+
+/* Specific skill colors */
+.skill-card-with-icon[data-skill="html"] .skill-icon-container {
+  background: linear-gradient(135deg, var(--html-color), #ff6b35);
+}
+
+.skill-card-with-icon[data-skill="css"] .skill-icon-container {
+  background: linear-gradient(135deg, var(--css-color), #4fc3f7);
+}
+
+.skill-card-with-icon[data-skill="javascript"] .skill-icon-container {
+  background: linear-gradient(135deg, var(--js-color), #ffeb3b);
+}
+
+.skill-card-with-icon[data-skill="javascript"] .skill-icon {
+  color: #333;
+}
+
+.skill-card-with-icon[data-skill="wordpress"] .skill-icon-container {
+  background: linear-gradient(135deg, var(--wordpress-color), #4db6ac);
+}
+
+.skill-card-with-icon[data-skill="python"] .skill-icon-container {
+  background: linear-gradient(135deg, var(--python-color), #42a5f5);
 }
