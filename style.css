@@ -765,15 +765,29 @@ h3 {
   }
 
   /* Mobile Skills Adjustments */
-  .skills-grid-simple {
-    grid-template-columns: repeat(auto-fit, minmax(120px, 1fr));
-    gap: 1rem;
+  .skills-grid-with-icons {
+    grid-template-columns: repeat(auto-fit, minmax(140px, 1fr));
+    gap: 1.5rem;
   }
 
-  .skill-card-simple {
-    padding: 1.5rem 0.5rem;
+  .skill-card-with-icon {
+    padding: 1.5rem 1rem;
+  }
+
+  .skill-icon-container {
+    width: 50px;
+    height: 50px;
+  }
+
+  .skill-icon {
+    width: 24px;
+    height: 24px;
+  }
+
+  .skill-name {
     font-size: 1rem;
   }
+
 
   .contact-info {
     grid-template-columns: 1fr;
