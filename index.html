@@ -5,17 +5,20 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <meta name="description" content="Jhansi Malleti - Creative UI/UX Designer crafting seamless web experiences.">
   <title>Jhansi Malleti | UI/UX Designer</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=Playfair+Display:wght@400;500;600;700&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="style.css" />
 </head>
 <body>
   <header class="header">
     <nav class="nav">
-      <div class="logo">Jhansi<span>Malleti</span></div>
+      <div class="logo">Jhansi<span> Malleti</span></div>
       <ul class="nav-links" id="nav-links">
         <li><a href="#home">Home</a></li>
         <li><a href="#about">About</a></li>
-        <li><a href="#projects">Projects</a></li>
         <li><a href="#skills">Skills</a></li>
+        <li><a href="#projects">Projects</a></li>
         <li><a href="#contact">Contact</a></li>
       </ul>
       <button class="menu-toggle" id="menu-toggle">
@@ -29,6 +32,7 @@
   </header>
 
   <section id="home" class="hero-section">
+    
     <div class="hero-content">
       <div class="profile-photo-container">
         <img 
@@ -37,40 +41,99 @@
           class="profile-photo" 
         />
       </div>
-      <h1>Hello, I'm Jhansi Malleti</h1>
+      <h1 class="hero-title">Hello, I'm <span class="highlight">Jhansi</span></h1>
       <h2 class="hero-subtitle">UI/UX Designer</h2>
       <p class="typing-container">
         I create <span class="typing-text" id="typing-text"></span><span class="cursor">|</span>
       </p>
       <div class="cta-buttons">
-        <a href="#projects" class="btn primary">View My Work</a>
-        <a href="#contact" class="btn secondary">Contact Me</a>
+        <button onclick="handleResumeDownload()" class="btn primary">
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+            <path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/>
+            <polyline points="7,10 12,15 17,10"/>
+            <line x1="12" y1="15" x2="12" y2="3"/>
+          </svg>
+          Download Resume
+        </button>
+        <a href="#projects" class="btn secondary">View My Work</a>
       </div>
     </div>
   </section>
 
   <section id="about" class="about-section">
     <div class="container">
-      <h2>About Me</h2>
+      <h2 class="section-title">About Me</h2>
+      <h3>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="accent-text">I'm Jhansi Malleti, a Passionate UI/UX Designer</span> with a strong interest in creating smooth and engaging user experiences. 
+          I enjoy turning complex problems into simple, beautiful, and user-friendly designs.</h3>
       <div class="about-content">
-        <p>
-          I'm Jhansi Malleti, a Passionate UI/UX Designer with a strong interest in creating smooth and engaging user experiences.
-          I enjoy turning complex problems into simple, beautiful, and user-friendly designs. With a strong foundation in
-          HTML, CSS, JavaScript, and Figma. I bring concepts to life from wireframes to polished products.
-        </p>
-        
-        <div class="resume-buttons">
-          <button onclick="handleResumeView()" class="btn primary resume-btn">
-            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-              <path d="M1 12s4-8 11-8 11 8 11 8-4 8-11 8-11-8-11-8z"></path>
-              <circle cx="12" cy="12" r="3"></circle>
-            </svg>
-            View Resume
-          </button>
+        <div class="about-main">
+          <div class="about-text">
+            <h3 class="about-subtitle">My Design Journey</h3>
+            <p class="lead">
+              My interest in design started during my college days. 
+              That’s one of the reasons I chose Computer Science-it gave me a strong base in technology. But over time, I realized  
+              <span class="accent-text">I enjoy the creative side of tech more than coding. I was always curious about how things look, how they work, and how they are designed.</span> 
+               That curiosity slowly turned into a passion for UI/UX design.
+            </p>
+            <p>
+             I’ve always been someone who observes the small details-how people use apps, how a product is designed, how something could be improved.
+              <span class="accent-text">These daily observations help me think like a designer.</span>I often ask myself: "What do users really need? How can I make this better?" 
+              This habit has improved my observation and problem-solving skills, which are key in the world of design.
+            </p>
+            <p>
+              I’m constantly working to improve myself as a designer. Every project, every idea, and every design I create helps me grow.
+               <span class="accent-text">My goal is to build a strong career in UI/UX design, where I can turn creative ideas into real solutions that help people.</span> 
+              I’m always eager to learn more about design and explore new ways to make digital experiences better.
+            </p>
+          </div>
+          
+          <div class="design-philosophy">
+            <h3 class="about-subtitle">What Drives Me</h3>
+            <div class="philosophy-grid">
+              <div class="philosophy-item">
+                <div class="philosophy-icon">
+                  <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                    <path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"/>
+                  </svg>
+                </div>
+                <h4>User Empathy</h4>
+                <p>I believe great design starts with understanding users' needs, emotions, and pain points.</p>
+              </div>
+              <div class="philosophy-item">
+                <div class="philosophy-icon">
+                  <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                    <circle cx="12" cy="12" r="10"/>
+                    <polygon points="16.24,7.76 14.12,14.12 7.76,16.24 9.88,9.88 16.24,7.76"/>
+                  </svg>
+                </div>
+                <h4>Problem Solving</h4>
+                <p>Every design challenge is an opportunity to create meaningful solutions that make a difference.</p>
+              </div>
+              <div class="philosophy-item">
+                <div class="philosophy-icon">
+                  <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                    <circle cx="12" cy="12" r="5"/>
+                    <line x1="12" y1="1" x2="12" y2="3"/>
+                    <line x1="12" y1="21" x2="12" y2="23"/>
+                    <line x1="4.22" y1="4.22" x2="5.64" y2="5.64"/>
+                    <line x1="18.36" y1="18.36" x2="19.78" y2="19.78"/>
+                    <line x1="1" y1="12" x2="3" y2="12"/>
+                    <line x1="21" y1="12" x2="23" y2="12"/>
+                    <line x1="4.22" y1="19.78" x2="5.64" y2="18.36"/>
+                    <line x1="18.36" y1="5.64" x2="19.78" y2="4.22"/>
+                  </svg>
+                </div>
+                <h4>Innovation</h4>
+                <p>I'm passionate about exploring new design trends and pushing creative boundaries.</p>
+              </div>
+              
+            </div>
+          </div>
         </div>
         
-        <h3>Education</h3>
-        <div class="education-list">
+        <div class="education-section">
+          <h3 class="about-subtitle">Educational Background</h3>
+          <div class="education-list">
           <div class="education-item">
             <strong>Bachelor of Technology in Computer Science</strong><br />
             Anil Neerukonda Institute of Technology and Sciences, Visakhapatnam<br />
@@ -87,17 +150,16 @@
             2017 - 2018
           </div>
         </div>
+        </div>
       </div>
     </div>
   </section>
 
   <section id="skills" class="skills-section">
     <div class="container">
-      <h2>My Skills</h2>
-      <div class="skills-grid-with-icons">
-        
-
-        <div class="skill-card-with-icon" data-skill="figma">
+      <h2 class="section-title">My Skills</h2>
+      <div class="skills-grid">
+        <div class="skill-card" data-skill="figma">
           <div class="skill-icon-container">
             <svg class="skill-icon" width="32" height="32" viewBox="0 0 24 24" fill="currentColor">
               <path d="M15.852 8.981h-4.588V0h4.588c2.476 0 4.49 2.014 4.49 4.49s-2.014 4.491-4.49 4.491zM12.735 7.51h3.117c1.665 0 3.019-1.355 3.019-3.019s-1.354-3.019-3.019-3.019h-3.117V7.51zm0 1.471H8.148c-2.476 0-4.49-2.015-4.49-4.491S5.672 0 8.148 0h4.588v8.981zm-4.587-7.51c-1.665 0-3.019 1.355-3.019 3.019s1.354 3.02 3.019 3.02h3.117V1.471H8.148zm4.587 15.019H8.148c-2.476 0-4.49-2.014-4.49-4.49s2.014-4.49 4.49-4.49h4.588v8.98zM8.148 8.981c-1.665 0-3.019 1.355-3.019 3.019s1.355 3.019 3.019 3.019h3.117V8.981H8.148zM8.172 24c-2.489 0-4.515-2.014-4.515-4.49s2.014-4.49 4.49-4.49h4.588v4.441c0 2.503-2.047 4.539-4.563 4.539zm-.024-7.51a3.023 3.023 0 0 0-3.019 3.019c0 1.665 1.365 3.019 3.044 3.019 1.705 0 3.093-1.376 3.093-3.068v-2.97H8.148zm7.704 0h-.098c-2.476 0-4.49-2.014-4.49-4.49s2.014-4.49 4.49-4.49 4.49 2.014 4.49 4.49-2.014 4.49-4.392 4.49zm-.097-7.509c-1.665 0-3.019 1.355-3.019 3.019s1.355 3.019 3.019 3.019 3.019-1.355 3.019-3.019-1.355-3.019-3.019-3.019z"/>
@@ -106,21 +168,21 @@
           <span class="skill-name">Figma</span>
         </div>
 
-        <div class="skill-card-with-icon" data-skill="illustrator">
+        <div class="skill-card" data-skill="illustrator">
           <div class="skill-icon-container">
             <span class="skill-icon">Ai</span>
           </div>
           <span class="skill-name">Illustrator</span>
         </div>
 
-        <div class="skill-card-with-icon" data-skill="photoshop">
+        <div class="skill-card" data-skill="photoshop">
           <div class="skill-icon-container">
             <span class="skill-icon">Ps</span>
           </div>
           <span class="skill-name">Photoshop</span>
         </div>
 
-        <div class="skill-card-with-icon" data-skill="wordpress">
+        <div class="skill-card" data-skill="wordpress">
           <div class="skill-icon-container">
             <svg class="skill-icon" width="32" height="32" viewBox="0 0 24 24" fill="currentColor">
               <path d="M21.469 6.825c.84 1.537 1.318 3.3 1.318 5.175 0 3.979-2.156 7.456-5.363 9.325l3.295-9.527c.615-1.54.82-2.771.82-3.864 0-.405-.026-.78-.07-1.11m-7.981.105c.647-.03 1.232-.105 1.232-.105.582-.075.514-.93-.067-.899 0 0-1.755.135-2.88.135-1.064 0-2.85-.15-2.85-.15-.585-.03-.661.855-.075.885 0 0 .54.061 1.125.105l1.68 4.605-2.37 7.08L5.354 6.9c.649-.03 1.234-.1 1.234-.1.585-.075.516-.93-.065-.896 0 0-1.746.138-2.874.138-.2 0-.438-.008-.69-.015C4.911 3.15 8.235 1.215 12 1.215c2.809 0 5.365 1.072 7.286 2.833-.046-.003-.091-.009-.141-.009-1.06 0-1.812.923-1.812 1.914 0 .89.513 1.643 1.06 2.531.411.72.89 1.643.89 2.977 0 .915-.354 1.994-.821 3.479l-1.075 3.585-3.9-11.61.001.014zM12 22.784c-1.059 0-2.081-.153-3.048-.437l3.237-9.406 3.315 9.087c.024.053.05.101.078.149-1.12.403-2.325.607-3.582.607M1.211 12c0-1.564.336-3.05.935-4.39L7.29 21.709C3.694 19.96 1.212 16.271 1.211 12M12 0C5.385 0 0 5.385 0 12s5.385 12 12 12 12-5.385 12-12S18.615 0 12 0"/>
@@ -128,13 +190,15 @@
           </div>
           <span class="skill-name">WordPress</span>
         </div>
-        <div class="skill-card-with-icon" data-skill="bootstrap">
+
+        <div class="skill-card" data-skill="bootstrap">
           <div class="skill-icon-container">
             <span class="skill-icon">B</span>
           </div>
           <span class="skill-name">Bootstrap</span>
         </div>
-        <div class="skill-card-with-icon" data-skill="python">
+
+        <div class="skill-card" data-skill="python">
           <div class="skill-icon-container">
             <svg class="skill-icon" width="32" height="32" viewBox="0 0 24 24" fill="currentColor">
               <path d="M14.25.18l.9.2.73.26.59.3.45.32.34.34.25.34.16.33.1.3.04.26.02.2-.01.13V8.5l-.05.63-.13.55-.21.46-.26.38-.3.31-.33.25-.35.19-.35.14-.33.1-.3.07-.26.04-.21.02H8.77l-.69.05-.59.14-.5.22-.41.27-.33.32-.27.35-.2.36-.15.37-.1.35-.07.32-.04.27-.02.21v3.06H3.17l-.21-.03-.28-.07-.32-.12-.35-.18-.36-.26-.36-.36-.35-.46-.32-.59-.28-.73-.21-.88-.14-1.05-.05-1.23.06-1.22.16-1.04.24-.87.32-.71.36-.57.4-.44.42-.33.42-.24.4-.16.36-.1.32-.05.24-.01h.16l.06.01h8.16v-.83H6.18l-.01-2.75-.02-.37.05-.34.11-.31.17-.28.25-.26.31-.23.38-.2.44-.18.51-.15.58-.12.64-.1.71-.06.77-.04.84-.02 1.27.05zm-6.3 1.98l-.23.33-.08.41.08.41.23.34.33.22.41.09.41-.09.33-.22.23-.34.08-.41-.08-.41-.23-.33-.33-.22-.41-.09-.41.09zm13.09 3.95l.28.06.32.12.35.18.36.27.36.35.35.47.32.59.28.73.21.88.14 1.04.05 1.23-.06 1.23-.16 1.04-.24.86-.32.71-.36.57-.4.45-.42.33-.42.24-.4.16-.36.09-.32.05-.24.02-.16-.01h-8.22v.82h5.84l.01 2.76.02.36-.05.34-.11.31-.17.29-.25.25-.31.24-.38.2-.44.17-.51.15-.58.13-.64.09-.71.07-.77.04-.84.01-1.27-.04-1.07-.14-.9-.2-.73-.25-.59-.3-.45-.33-.34-.34-.25-.34-.16-.33-.1-.3-.04-.25-.02-.2.01-.13v-5.34l.05-.64.13-.54.21-.46.26-.38.3-.32.33-.24.35-.2.35-.14.33-.1.3-.06.26-.04.21-.02.13-.01h5.84l.69-.05.59-.14.5-.21.41-.28.33-.32.27-.35.2-.36.15-.36.1-.35.07-.32.04-.28.02-.21V6.07h2.09l.14.01zm-6.47 14.25l-.23.33-.08.41.08.41.23.33.33.23.41.08.41-.08.33-.23.23-.33.08-.41-.08-.41-.23-.33-.33-.23-.41-.08-.41.08z"/>
@@ -143,7 +207,7 @@
           <span class="skill-name">Python</span>
         </div>
 
-        <div class="skill-card-with-icon" data-skill="html">
+        <div class="skill-card" data-skill="html">
           <div class="skill-icon-container">
             <svg class="skill-icon" width="32" height="32" viewBox="0 0 24 24" fill="currentColor">
               <path d="M1.5 0h21l-1.91 21.563L11.977 24l-8.564-2.438L1.5 0zm7.031 9.75l-.232-2.718 10.059.003.23-2.622L5.412 4.41l.698 8.01h9.126l-.326 3.426-2.91.804-2.955-.81-.188-2.11H6.248l.33 4.171L12 19.351l5.379-1.443.744-8.157H8.531z"/>
@@ -152,7 +216,7 @@
           <span class="skill-name">HTML</span>
         </div>
 
-        <div class="skill-card-with-icon" data-skill="css">
+        <div class="skill-card" data-skill="css">
           <div class="skill-icon-container">
             <svg class="skill-icon" width="32" height="32" viewBox="0 0 24 24" fill="currentColor">
               <path d="M1.5 0h21l-1.91 21.563L11.977 24l-8.565-2.438L1.5 0zm17.09 4.413L5.41 4.41l.213 2.622 10.125.002-.255 2.716h-6.64l.24 2.573h6.182l-.366 3.523-2.91.804-2.956-.81-.188-2.11h-2.61l.29 3.855L12 19.288l5.373-1.53L18.59 4.414z"/>
@@ -161,7 +225,7 @@
           <span class="skill-name">CSS</span>
         </div>
 
-        <div class="skill-card-with-icon" data-skill="javascript">
+        <div class="skill-card" data-skill="javascript">
           <div class="skill-icon-container">
             <svg class="skill-icon" width="32" height="32" viewBox="0 0 24 24" fill="currentColor">
               <path d="M0 0h24v24H0V0zm22.034 18.276c-.175-1.095-.888-2.015-3.003-2.873-.736-.345-1.554-.585-1.797-1.14-.091-.33-.105-.51-.046-.705.15-.646.915-.84 1.515-.66.39.12.75.42.976.9 1.034-.676 1.034-.676 1.755-1.125-.27-.42-.404-.601-.586-.78-.63-.705-1.469-1.065-2.834-1.034l-.705.089c-.676.165-1.32.525-1.71 1.005-1.14 1.291-.811 3.541.569 4.471 1.365 1.02 3.361 1.244 3.616 2.205.24 1.17-.87 1.545-1.966 1.41-.811-.18-1.26-.586-1.755-1.336l-1.83 1.051c.21.48.45.689.81 1.109 1.74 1.756 6.09 1.666 6.871-1.004.029-.09.24-.705.074-1.65l.046.067zm-8.983-7.245h-2.248c0 1.938-.009 3.864-.009 5.805 0 1.232.063 2.363-.138 2.711-.33.689-1.18.601-1.566.48-.396-.196-.597-.466-.83-.855-.063-.105-.11-.196-.127-.196l-1.825 1.125c.305.63.75 1.172 1.324 1.517.855.51 2.004.675 3.207.405.783-.226 1.458-.691 1.811-1.411.51-.93.402-2.07.397-3.346.012-2.054 0-4.109 0-6.179l.004-.056z"/>
@@ -172,463 +236,361 @@
       </div>
     </div>
   </section>
+
   <section id="projects" class="projects-section">
     <div class="container">
-      <h2>My Projects</h2>
+      <h2 class="section-title">My Projects</h2>
       
       <div class="project-filters">
-        <button class="filter-btn active" data-filter="figma">Figma</button>
-        <button class="filter-btn" data-filter="illustrator">Illustrator</button>
-        <button class="filter-btn" data-filter="photoshop">Photoshop</button>
-        <button class="filter-btn" data-filter="html-css">HTML & CSS</button>
-        <button class="filter-btn" data-filter="javascript">JavaScript</button>
-        <button class="filter-btn" data-filter="bootstrap">Bootstrap</button>
-        <button class="filter-btn" data-filter="wordpress">WordPress</button>
+        <button class="filter-btn active" data-filter="figma">
+          <svg class="filter-icon" width="20" height="20" viewBox="0 0 24 24" fill="currentColor">
+            <path d="M15.852 8.981h-4.588V0h4.588c2.476 0 4.49 2.014 4.49 4.49s-2.014 4.491-4.49 4.491zM12.735 7.51h3.117c1.665 0 3.019-1.355 3.019-3.019s-1.354-3.019-3.019-3.019h-3.117V7.51zm0 1.471H8.148c-2.476 0-4.49-2.015-4.49-4.491S5.672 0 8.148 0h4.588v8.981zm-4.587-7.51c-1.665 0-3.019 1.355-3.019 3.019s1.354 3.02 3.019 3.02h3.117V1.471H8.148zm4.587 15.019H8.148c-2.476 0-4.49-2.014-4.49-4.49s2.014-4.49 4.49-4.49h4.588v8.98zM8.148 8.981c-1.665 0-3.019 1.355-3.019 3.019s1.355 3.019 3.019 3.019h3.117V8.981H8.148zM8.172 24c-2.489 0-4.515-2.014-4.515-4.49s2.014-4.49 4.49-4.49h4.588v4.441c0 2.503-2.047 4.539-4.563 4.539zm-.024-7.51a3.023 3.023 0 0 0-3.019 3.019c0 1.665 1.365 3.019 3.044 3.019 1.705 0 3.093-1.376 3.093-3.068v-2.97H8.148zm7.704 0h-.098c-2.476 0-4.49-2.014-4.49-4.49s2.014-4.49 4.49-4.49 4.49 2.014 4.49 4.49-2.014 4.49-4.392 4.49zm-.097-7.509c-1.665 0-3.019 1.355-3.019 3.019s1.355 3.019 3.019 3.019 3.019-1.355 3.019-3.019-1.355-3.019-3.019-3.019z"/>
+          </svg>
+          Figma
+        </button>
+        <button class="filter-btn" data-filter="illustrator">
+          <span class="filter-icon ai-icon">Ai</span>
+          Illustrator
+        </button>
+        <button class="filter-btn" data-filter="photoshop">
+          <span class="filter-icon ps-icon">Ps</span>
+          Photoshop
+        </button>
+        <button class="filter-btn" data-filter="html-css">
+          <svg class="filter-icon" width="20" height="20" viewBox="0 0 24 24" fill="currentColor">
+            <path d="M1.5 0h21l-1.91 21.563L11.977 24l-8.564-2.438L1.5 0zm7.031 9.75l-.232-2.718 10.059.003.23-2.622L5.412 4.41l.698 8.01h9.126l-.326 3.426-2.91.804-2.955-.81-.188-2.11H6.248l.33 4.171L12 19.351l5.379-1.443.744-8.157H8.531z"/>
+          </svg>
+          HTML & CSS
+        </button>
+        <button class="filter-btn" data-filter="javascript">
+          <svg class="filter-icon" width="20" height="20" viewBox="0 0 24 24" fill="currentColor">
+            <path d="M0 0h24v24H0V0zm22.034 18.276c-.175-1.095-.888-2.015-3.003-2.873-.736-.345-1.554-.585-1.797-1.14-.091-.33-.105-.51-.046-.705.15-.646.915-.84 1.515-.66.39.12.75.42.976.9 1.034-.676 1.034-.676 1.755-1.125-.27-.42-.404-.601-.586-.78-.63-.705-1.469-1.065-2.834-1.034l-.705.089c-.676.165-1.32.525-1.71 1.005-1.14 1.291-.811 3.541.569 4.471 1.365 1.02 3.361 1.244 3.616 2.205.24 1.17-.87 1.545-1.966 1.41-.811-.18-1.26-.586-1.755-1.336l-1.83 1.051c.21.48.45.689.81 1.109 1.74 1.756 6.09 1.666 6.871-1.004.029-.09.24-.705.074-1.65l.046.067zm-8.983-7.245h-2.248c0 1.938-.009 3.864-.009 5.805 0 1.232.063 2.363-.138 2.711-.33.689-1.18.601-1.566.48-.396-.196-.597-.466-.83-.855-.063-.105-.11-.196-.127-.196l-1.825 1.125c.305.63.75 1.172 1.324 1.517.855.51 2.004.675 3.207.405.783-.226 1.458-.691 1.811-1.411.51-.93.402-2.07.397-3.346.012-2.054 0-4.109 0-6.179l.004-.056z"/>
+          </svg>
+          JavaScript
+        </button>
+        <button class="filter-btn" data-filter="bootstrap">
+          <span class="filter-icon b-icon">B</span>
+          Bootstrap
+        </button>
+        <button class="filter-btn" data-filter="wordpress">
+          <svg class="filter-icon" width="20" height="20" viewBox="0 0 24 24" fill="currentColor">
+            <path d="M21.469 6.825c.84 1.537 1.318 3.3 1.318 5.175 0 3.979-2.156 7.456-5.363 9.325l3.295-9.527c.615-1.54.82-2.771.82-3.864 0-.405-.026-.78-.07-1.11m-7.981.105c.647-.03 1.232-.105 1.232-.105.582-.075.514-.93-.067-.899 0 0-1.755.135-2.88.135-1.064 0-2.85-.15-2.85-.15-.585-.03-.661.855-.075.885 0 0 .54.061 1.125.105l1.68 4.605-2.37 7.08L5.354 6.9c.649-.03 1.234-.1 1.234-.1.585-.075.516-.93-.065-.896 0 0-1.746.138-2.874.138-.2 0-.438-.008-.69-.015C4.911 3.15 8.235 1.215 12 1.215c2.809 0 5.365 1.072 7.286 2.833-.046-.003-.091-.009-.141-.009-1.06 0-1.812.923-1.812 1.914 0 .89.513 1.643 1.06 2.531.411.72.89 1.643.89 2.977 0 .915-.354 1.994-.821 3.479l-1.075 3.585-3.9-11.61.001.014zM12 22.784c-1.059 0-2.081-.153-3.048-.437l3.237-9.406 3.315 9.087c.024.053.05.101.078.149-1.12.403-2.325.607-3.582.607M1.211 12c0-1.564.336-3.05.935-4.39L7.29 21.709C3.694 19.96 1.212 16.271 1.211 12M12 0C5.385 0 0 5.385 0 12s5.385 12 12 12 12-5.385 12-12S18.615 0 12 0"/>
+          </svg>
+          WordPress
+        </button>
       </div>
 
       <div class="project-grid" id="project-grid">
-         <!-- FIGMA PROJECTS -->
-        <div class="project-card" data-category="figma">
+        <!-- FIGMA PROJECTS -->
+        <div class="project-item" data-category="figma">
           <div class="project-image">
-            <img src="https://i.pinimg.com/736x/6b/90/3f/6b903f81b5618d62c005eaad5dc9bf4b.jpg" alt="netmirror" />
+            <img src="https://i.pinimg.com/736x/6b/90/3f/6b903f81b5618d62c005eaad5dc9bf4b.jpg" alt="netmirror prototype" />
             <div class="project-overlay">
               <a href="https://www.figma.com/proto/9hnKjCoTrSQUfKlaDXxOk4/netmiror?node-id=1-2&t=jQVh8VHHM6yXz9vJ-1&scaling=scale-down&content-scaling=fixed&page-id=0%3A1&starting-point-node-id=5%3A12" target="_blank" rel="noopener noreferrer" class="project-link">
-                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-                  <path d="m7 7 10 10-5 5-5-5Z"/>
-                  <path d="m13 7 6 6-6 6"/>
-                  <path d="m7 13 6 6-6 6"/>
+                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                  <path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"/>
+                  <polyline points="15,3 21,3 21,9"/>
+                  <line x1="10" y1="14" x2="21" y2="3"/>
                 </svg>
               </a>
             </div>
           </div>
-          <div class="project-info">
-            <h3>Netmirror OTT Platform</h3>
-            <p>NetMirror is a multi-platform streaming app that allows users to access content from Netflix, Prime Video, Disney+ Hotstar, HBO Max, Apple ...</p>
-            <div class="project-tags">
-              <span class="tag">Figma</span>
-            </div>
-            <a href="https://www.figma.com/proto/9hnKjCoTrSQUfKlaDXxOk4/netmiror?node-id=1-2&t=jQVh8VHHM6yXz9vJ-1&scaling=scale-down&content-scaling=fixed&page-id=0%3A1&starting-point-node-id=5%3A12" target="_blank" rel="noopener noreferrer" class="btn primary">
-              View Project
-            </a>
+          <div class="project-content">
+            <h3>Netmirror OTT Platform - Mobile App</h3>
+            <p>Multi-platform streaming app for Netflix, Prime Video, Disney+ Hotstar, HBO Max, and more...</p>
+            <span class="project-tag">Figma Case Study</span>
           </div>
         </div>
-        <div class="project-card" data-category="figma">
+
+        <div class="project-item" data-category="figma">
           <div class="project-image">
-            <img src="https://mir-s3-cdn-cf.behance.net/projects/404/b8770a183527257.Y3JvcCw0MjA3LDMyOTEsNTkzLDQzNw.png" alt="neignbourgoods" />
+            <img src="https://mir-s3-cdn-cf.behance.net/projects/404/b8770a183527257.Y3JvcCw0MjA3LDMyOTEsNTkzLDQzNw.png" alt="neighbourgoods case study" />
             <div class="project-overlay">
               <a href="https://www.figma.com/proto/W0oJ7eSC1MvTqTjWxGOQxf/neighborgoods?node-id=4-6&t=1ajsj0j6Fr8IzFRY-1&scaling=scale-down&content-scaling=fixed&page-id=0%3A1&starting-point-node-id=1%3A2" target="_blank" rel="noopener noreferrer" class="project-link">
-                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-                  <path d="m7 7 10 10-5 5-5-5Z"/>
-                  <path d="m13 7 6 6-6 6"/>
-                  <path d="m7 13 6 6-6 6"/>
+                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                  <path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"/>
+                  <polyline points="15,3 21,3 21,9"/>
+                  <line x1="10" y1="14" x2="21" y2="3"/>
                 </svg>
               </a>
             </div>
           </div>
-          <div class="project-info">
-            <h3>NeighbourGood</h3>
-            <p>NeighborGood is a social networking platform designed to bring neighbors together, fostering real-life connections and community engagement.</p>
-            <div class="project-tags">
-              <span class="tag">Figma</span>
-            </div>
-            <a href="https://www.figma.com/proto/W0oJ7eSC1MvTqTjWxGOQxf/neighborgoods?node-id=4-6&t=1ajsj0j6Fr8IzFRY-1&scaling=scale-down&content-scaling=fixed&page-id=0%3A1&starting-point-node-id=1%3A2" target="_blank" rel="noopener noreferrer" class="btn primary">
-              View Project
-            </a>
+          <div class="project-content">
+            <h3>NeighbourGood - Mobile App</h3>
+            <p>Social networking platform designed to bring neighbors together, fostering real-life connections</p>
+            <span class="project-tag">Figma Prototype</span>
           </div>
         </div>
-        <!-- ILLUSTRATOR PROJECTS -->
-        <div class="project-card" data-category="illustrator">
+
+        <!--<div class="project-item" data-category="figma">
           <div class="project-image">
-            <img src="https://cdn.mos.cms.futurecdn.net/qfj7cU3bTy9NbjJQGJsm6n-1200-80.jpg" alt="Flyers" />
+            <img src="https://images.pexels.com/photos/196644/pexels-photo-196644.jpeg" alt="wireframes" />
+            <div class="project-overlay">
+              <a href="#" target="_blank" rel="noopener noreferrer" class="project-link">
+                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                  <path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"/>
+                  <polyline points="15,3 21,3 21,9"/>
+                  <line x1="10" y1="14" x2="21" y2="3"/>
+                </svg>
+              </a>
+            </div>
+          </div>
+          <div class="project-content">
+            <h3>E-commerce App - Wireframes</h3>
+            <p>Low-fidelity wireframes for mobile e-commerce application design</p>
+            <span class="project-tag">Figma Wireframes</span>
+          </div>
+        </div>-->
+
+        <!-- ILLUSTRATOR PROJECTS -->
+        <div class="project-item" data-category="illustrator">
+          <div class="project-image">
+            <img src="https://i.pinimg.com/736x/c6/a7/96/c6a79645a2aabfa5ec501c0ab2775897.jpg" alt="Flyers" />
             <div class="project-overlay">
               <a href="AI flyers.pdf" target="_blank" rel="noopener noreferrer" class="project-link">
-                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-                  <path d="m7 7 10 10-5 5-5-5Z"/>
-                  <path d="m13 7 6 6-6 6"/>
-                  <path d="m7 13 6 6-6 6"/>
+                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                  <path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"/>
+                  <polyline points="15,3 21,3 21,9"/>
+                  <line x1="10" y1="14" x2="21" y2="3"/>
                 </svg>
               </a>
             </div>
           </div>
-          <div class="project-info">
-            <h3>Flyers</h3>
-            <p>Flyer is a piece of paper used to advertise or inform about a product, service, event, or idea.</p>
-            <div class="project-tags">
-              <span class="tag">Adobe Illustrator</span>
-            </div>
-            <a href="AI flyers.pdf" target="_blank" rel="noopener noreferrer" class="btn primary">
-              View Project
-            </a>
+          <div class="project-content">
+            <h3>Creative Flyers</h3>
+            <p>Collection of creative flyers for various events and promotional campaigns</p>
+            <span class="project-tag">Adobe Illustrator</span>
           </div>
         </div>
 
-        <div class="project-card" data-category="illustrator">
+        <div class="project-item" data-category="illustrator">
           <div class="project-image">
-            <img src="https://cdn.mos.cms.futurecdn.net/qfj7cU3bTy9NbjJQGJsm6n-1200-80.jpg" alt="Stationery" />
+            <img src="https://i.pinimg.com/736x/b1/36/16/b1361666fa2b150a1572809f668ecb1a.jpg" alt="Business Stationery" />
             <div class="project-overlay">
-              <a href="wow mom stationery.pdf" target="_blank" rel="noopener noreferrer" class="project-link">
-                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-                  <path d="m7 7 10 10-5 5-5-5Z"/>
-                  <path d="m13 7 6 6-6 6"/>
-                  <path d="m7 13 6 6-6 6"/>
+              <a href="wow mom stationery.svg" target="_blank" rel="noopener noreferrer" class="project-link">
+                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                  <path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"/>
+                  <polyline points="15,3 21,3 21,9"/>
+                  <line x1="10" y1="14" x2="21" y2="3"/>
                 </svg>
               </a>
             </div>
           </div>
-          <div class="project-info">
-            <h3>Stationery</h3>
-            <p>Business stationery refers to printed materials that businesses use for communication and branding purposes.</p>
-            <div class="project-tags">
-              <span class="tag">Adobe Illustrator</span>
-            </div>
-            <a href="wow mom stationery.pdf" target="_blank" rel="noopener noreferrer" class="btn primary">
-              View Project
-            </a>
+          <div class="project-content">
+            <h3>Business Stationery</h3>
+            <p>Professional stationery design for corporate branding and communication</p>
+            <span class="project-tag">Adobe Illustrator</span>
           </div>
         </div>
 
-        <div class="project-card" data-category="illustrator">
+        <div class="project-item" data-category="illustrator">
           <div class="project-image">
-            <img src="https://cdn.mos.cms.futurecdn.net/qfj7cU3bTy9NbjJQGJsm6n-1200-80.jpg" alt="Brand Guidelines" />
+            <img src="https://images.pexels.com/photos/3184292/pexels-photo-3184292.jpeg" alt="Brand Guidelines" />
             <div class="project-overlay">
               <a href="brand guidlines.pdf" target="_blank" rel="noopener noreferrer" class="project-link">
-                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-                  <path d="m7 7 10 10-5 5-5-5Z"/>
-                  <path d="m13 7 6 6-6 6"/>
-                  <path d="m7 13 6 6-6 6"/>
+                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                  <path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"/>
+                  <polyline points="15,3 21,3 21,9"/>
+                  <line x1="10" y1="14" x2="21" y2="3"/>
                 </svg>
               </a>
             </div>
           </div>
-          <div class="project-info">
+          <div class="project-content">
             <h3>Brand Guidelines</h3>
-            <p>Brand Guidelines are clearly defined rules and standards that communicate how your brand should be represented to the world.</p>
-            <div class="project-tags">
-              <span class="tag">Adobe Illustrator</span>
-            </div>
-            <a href="brand guidlines.pdf" target="_blank" rel="noopener noreferrer" class="btn primary">
-              View Project
-            </a>
+            <p>Comprehensive brand guidelines defining visual identity standards</p>
+            <span class="project-tag">Adobe Illustrator</span>
           </div>
         </div>
 
         <!-- PHOTOSHOP PROJECTS -->
-        <div class="project-card" data-category="photoshop">
+        <div class="project-item" data-category="photoshop">
           <div class="project-image">
-            <img src="https://www.tutkit.com/storage/media/packages/1110/1110-ki-in-photoshop-next-level-bildbearbeitung-mit-kuenstlicher-intelligenz-feat.jpg" alt="Clipping Mask" />
+            <img src="https://www.tutkit.com/storage/media/packages/1110/1110-ki-in-photoshop-next-level-bildbearbeitung-mit-kuenstlicher-intelligenz-feat.jpg" alt="Animation" />
             <div class="project-overlay">
               <a href="life-cycle.gif" target="_blank" rel="noopener noreferrer" class="project-link">
-                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-                  <path d="m7 7 10 10-5 5-5-5Z"/>
-                  <path d="m13 7 6 6-6 6"/>
-                  <path d="m7 13 6 6-6 6"/>
+                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                  <path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"/>
+                  <polyline points="15,3 21,3 21,9"/>
+                  <line x1="10" y1="14" x2="21" y2="3"/>
                 </svg>
               </a>
             </div>
           </div>
-          <div class="project-info">
-            <h3>Gif/Animation</h3>
-            <p>Flyer is a piece of paper used to advertise or inform about a product, service, event, or idea.</p>
-            <div class="project-tags">
-              <span class="tag">Adobe Photoshop</span>
-            </div>
-            <a href="life-cycle.gif" target="_blank" rel="noopener noreferrer" class="btn primary">
-              View Project
-            </a>
-          </div>
-        </div> 
-        <div class="project-card" data-category="photoshop">
-         <div class="project-image">
-            <img src="https://www.tutkit.com/storage/media/packages/1110/1110-ki-in-photoshop-next-level-bildbearbeitung-mit-kuenstlicher-intelligenz-feat.jpg" alt="Clipping Mask" />
-            <div class="project-overlay">
-              <a href="music event stationery.pdf" target="_blank" rel="noopener noreferrer" class="project-link">
-                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-                  <path d="m7 7 10 10-5 5-5-5Z"/>
-                  <path d="m13 7 6 6-6 6"/>
-                  <path d="m7 13 6 6-6 6"/>
-                </svg>
-              </a>
-            </div>
-          </div>
-          <div class="project-info">
-            <h3>Music Event Stationery</h3>
-            <p>Business stationery refers to printed materials that businesses use for communication and branding purposes.</p>
-            <div class="project-tags">
-              <span class="tag">Adobe Photoshop</span>
-            </div>
-            <a href="music event stationery.pdf" target="_blank" rel="noopener noreferrer" class="btn primary">
-              View Project
-            </a>
-          </div>
-        </div>
-         <div class="project-card" data-category="photoshop">
-          <div class="project-image">
-            <img src="https://www.tutkit.com/storage/media/packages/1110/1110-ki-in-photoshop-next-level-bildbearbeitung-mit-kuenstlicher-intelligenz-feat.jpg" alt="Clipping Mask" />
-            <div class="project-overlay">
-              <a href="Ps Flyer.pdf" target="_blank" rel="noopener noreferrer" class="project-link">
-                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-                  <path d="m7 7 10 10-5 5-5-5Z"/>
-                  <path d="m13 7 6 6-6 6"/>
-                  <path d="m7 13 6 6-6 6"/>
-                </svg>
-              </a>
-            </div>
-          </div>
-          <div class="project-info">
-            <h3>Flyers</h3>
-            <p>Flyer is a piece of paper used to advertise or inform about a product, service, event, or idea.</p>
-            <div class="project-tags">
-              <span class="tag">Adobe Photoshop</span>
-            </div>
-            <a href="Ps Flyer.pdf" target="_blank" rel="noopener noreferrer" class="btn primary">
-              View Project
-            </a>
-          </div>
-        </div>
-        <div class="project-card" data-category="photoshop">
-          <div class="project-image">
-            <img src="https://www.tutkit.com/storage/media/packages/1110/1110-ki-in-photoshop-next-level-bildbearbeitung-mit-kuenstlicher-intelligenz-feat.jpg" alt="Clipping Mask" />
-            <div class="project-overlay">
-              <a href="clipping mask copy.pdf" target="_blank" rel="noopener noreferrer" class="project-link">
-                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-                  <path d="m7 7 10 10-5 5-5-5Z"/>
-                  <path d="m13 7 6 6-6 6"/>
-                  <path d="m7 13 6 6-6 6"/>
-                </svg>
-              </a>
-            </div>
-          </div>
-          <div class="project-info">
-            <h3>Clipping Mask</h3>
-            <p>Clipping mask allows us to use the shape of one layer to control the visibility of another layer above it.</p>
-            <div class="project-tags">
-              <span class="tag">Adobe Photoshop</span>
-            </div>
-            <a href="clipping mask copy.pd" target="_blank" rel="noopener noreferrer" class="btn primary">
-              View Project
-            </a>
+          <div class="project-content">
+            <h3>Animation & GIFs</h3>
+            <p>Creative animations and GIF designs for digital marketing</p>
+            <span class="project-tag">Adobe Photoshop</span>
           </div>
         </div>
 
-        <div class="project-card" data-category="photoshop">
+        <div class="project-item" data-category="photoshop">
           <div class="project-image">
-            <img src="https://www.tutkit.com/storage/media/packages/1110/1110-ki-in-photoshop-next-level-bildbearbeitung-mit-kuenstlicher-intelligenz-feat.jpg" alt="Adaptation" />
+            <img src="https://images.pexels.com/photos/1763075/pexels-photo-1763075.jpeg" alt="Music Event Stationery" />
             <div class="project-overlay">
-              <a href="adaptation.pdf" target="_blank" rel="noopener noreferrer" class="project-link">
-                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-                  <path d="m7 7 10 10-5 5-5-5Z"/>
-                  <path d="m13 7 6 6-6 6"/>
-                  <path d="m7 13 6 6-6 6"/>
+              <a href="music event stationery.pdf" target="_blank" rel="noopener noreferrer" class="project-link">
+                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                  <path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"/>
+                  <polyline points="15,3 21,3 21,9"/>
+                  <line x1="10" y1="14" x2="21" y2="3"/>
                 </svg>
               </a>
             </div>
           </div>
-          <div class="project-info">
-            <h3>Adaptation</h3>
-            <p>Business stationery refers to printed materials that businesses use for communication and branding purposes.</p>
-            <div class="project-tags">
-              <span class="tag">Adobe Photoshop</span>
-            </div>
-            <a href="adaptation.pdf" target="_blank" rel="noopener noreferrer" class="btn primary">
-              View Project
-            </a>
+          <div class="project-content">
+            <h3>Music Event Stationery</h3>
+            <p>Event branding materials for music festivals and concerts</p>
+            <span class="project-tag">Adobe Photoshop</span>
           </div>
         </div>
-        <!-- HTML, CSS PROJECTS -->
-        <div class="project-card" data-category="html-css">
+
+        <div class="project-item" data-category="photoshop">
           <div class="project-image">
-            <img src="https://img.freepik.com/premium-vector/set-juicy-apples-red-green-color-whole-slice-summer-fruit-collection_647443-666.jpg?semt=ais_hybrid&w=740" alt="fruitshop" />
+            <img src="https://i.pinimg.com/736x/2e/64/7c/2e647c97d3d3429d157c0f0d7dba7cd8.jpg" alt="Digital Flyers" />
+            <div class="project-overlay">
+              <a href="Ps Flyer.pdf" target="_blank" rel="noopener noreferrer" class="project-link">
+                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                  <path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"/>
+                  <polyline points="15,3 21,3 21,9"/>
+                  <line x1="10" y1="14" x2="21" y2="3"/>
+                </svg>
+              </a>
+            </div>
+          </div>
+          <div class="project-content">
+            <h3>Digital Flyers</h3>
+            <p>Modern digital flyer designs for social media campaigns</p>
+            <span class="project-tag">Adobe Photoshop</span>
+          </div>
+        </div>
+
+        <!-- HTML & CSS PROJECTS -->
+        <div class="project-item" data-category="html-css">
+          <div class="project-image">
+            <img src="https://img.freepik.com/premium-vector/set-juicy-apples-red-green-color-whole-slice-summer-fruit-collection_647443-666.jpg" alt="fruitshop" />
             <div class="project-overlay">
               <a href="https://jhansimalleti264.github.io/Fruit-Shop-Landing-Page-Html/" target="_blank" rel="noopener noreferrer" class="project-link">
-                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-                  <path d="m7 7 10 10-5 5-5-5Z"/>
-                  <path d="m13 7 6 6-6 6"/>
-                  <path d="m7 13 6 6-6 6"/>
+                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                  <path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"/>
+                  <polyline points="15,3 21,3 21,9"/>
+                  <line x1="10" y1="14" x2="21" y2="3"/>
                 </svg>
               </a>
             </div>
           </div>
-          <div class="project-info">
+          <div class="project-content">
             <h3>Fruit Shop Landing Page</h3>
-            <p>A fruit shop landing page should be visually appealing and easy to navigate, with clear calls to action and product showcases.</p>
-            <div class="project-tags">
-              <span class="tag">HTML</span>
-              <span class="tag">CSS</span>
-              <span class="tag">JavaScript</span>
-            </div>
-            <a href="https://jhansimalleti264.github.io/Fruit-Shop-Landing-Page-Html/" target="_blank" rel="noopener noreferrer" class="btn primary">
-              View Project
-            </a>
+            <p>Responsive e-commerce landing page with modern design and smooth animations</p>
+            <span class="project-tag">HTML & CSS</span>
           </div>
         </div>
+
         <!-- JAVASCRIPT PROJECTS -->
-        <div class="project-card" data-category="javascript">
+        <div class="project-item" data-category="javascript">
           <div class="project-image">
             <img src="https://i.ytimg.com/vi/NfKp30TfSGM/sddefault.jpg" alt="Palindrome Checker" />
             <div class="project-overlay">
               <a href="https://jhansimalleti264.github.io/Palindrome/" target="_blank" rel="noopener noreferrer" class="project-link">
-                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-                  <path d="m7 7 10 10-5 5-5-5Z"/>
-                  <path d="m13 7 6 6-6 6"/>
-                  <path d="m7 13 6 6-6 6"/>
+                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                  <path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"/>
+                  <polyline points="15,3 21,3 21,9"/>
+                  <line x1="10" y1="14" x2="21" y2="3"/>
                 </svg>
               </a>
             </div>
           </div>
-          <div class="project-info">
+          <div class="project-content">
             <h3>Palindrome Checker</h3>
-            <p>A responsive web app that checks whether a given word or phrase is a palindrome, handling punctuation and spacing intelligently.</p>
-            <div class="project-tags">
-              <span class="tag">HTML</span>
-              <span class="tag">CSS</span>
-              <span class="tag">JavaScript</span>
-            </div>
-            <a href="https://jhansimalleti264.github.io/Palindrome/" target="_blank" rel="noopener noreferrer" class="btn primary">
-              View Project
-            </a>
+            <p>Interactive web app that checks palindromes with intelligent text processing</p>
+            <span class="project-tag">JavaScript</span>
           </div>
         </div>
 
-        <div class="project-card" data-category="javascript">
+        <div class="project-item" data-category="javascript">
           <div class="project-image">
             <img src="https://images.pexels.com/photos/5428836/pexels-photo-5428836.jpeg" alt="Quiz App" />
             <div class="project-overlay">
               <a href="https://jhansimalleti264.github.io/Quiz/" target="_blank" rel="noopener noreferrer" class="project-link">
-                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-                  <path d="m7 7 10 10-5 5-5-5Z"/>
-                  <path d="m13 7 6 6-6 6"/>
-                  <path d="m7 13 6 6-6 6"/>
+                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                  <path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"/>
+                  <polyline points="15,3 21,3 21,9"/>
+                  <line x1="10" y1="14" x2="21" y2="3"/>
                 </svg>
               </a>
             </div>
           </div>
-          <div class="project-info">
-            <h3>Quiz App</h3>
-            <p>A simple quiz application with multiple choice questions and dynamic question loading.</p>
-            <div class="project-tags">
-              <span class="tag">HTML</span>
-              <span class="tag">CSS</span>
-              <span class="tag">JavaScript</span>
-            </div>
-            <a href="https://jhansimalleti264.github.io/Quiz/" target="_blank" rel="noopener noreferrer" class="btn primary">
-              View Project
-            </a>
+          <div class="project-content">
+            <h3>Quiz Application</h3>
+            <p>Dynamic quiz app with multiple choice questions and score tracking</p>
+            <span class="project-tag">JavaScript</span>
           </div>
         </div>
 
-        <div class="project-card" data-category="javascript">
+        <div class="project-item" data-category="javascript">
           <div class="project-image">
             <img src="https://images.pexels.com/photos/574071/pexels-photo-574071.jpeg" alt="Number System Converter" />
             <div class="project-overlay">
               <a href="https://jhansimalleti264.github.io/Number-Converter/" target="_blank" rel="noopener noreferrer" class="project-link">
-                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-                  <path d="m7 7 10 10-5 5-5-5Z"/>
-                  <path d="m13 7 6 6-6 6"/>
-                  <path d="m7 13 6 6-6 6"/>
+                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                  <path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"/>
+                  <polyline points="15,3 21,3 21,9"/>
+                  <line x1="10" y1="14" x2="21" y2="3"/>
                 </svg>
               </a>
             </div>
           </div>
-          <div class="project-info">
+          <div class="project-content">
             <h3>Number System Converter</h3>
-            <p>A Number System Converter is one that can be used to convert a number from one type to another type namely Decimals, Binary, Octal, and Hexadecimal.</p>
-            <div class="project-tags">
-              <span class="tag">HTML</span>
-              <span class="tag">CSS</span>
-              <span class="tag">JavaScript</span>
-            </div>
-            <a href="https://jhansimalleti264.github.io/Number-Converter/" target="_blank" rel="noopener noreferrer" class="btn primary">
-              View Project
-            </a>
+            <p>Tool for converting between decimal, binary, octal, and hexadecimal systems</p>
+            <span class="project-tag">JavaScript</span>
           </div>
         </div>
 
-       <!-- <div class="project-card" data-category="javascript">
-          <div class="project-image">
-            <img src="https://images.pexels.com/photos/163064/play-stone-network-networked-interactive-163064.jpeg" alt="Number Guessing Game" />
-            <div class="project-overlay">
-              <a href="https://jhansimalleti264.github.io/Number-Guessing-Game/" target="_blank" rel="noopener noreferrer" class="project-link">
-                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-                  <path d="m7 7 10 10-5 5-5-5Z"/>
-                  <path d="m13 7 6 6-6 6"/>
-                  <path d="m7 13 6 6-6 6"/>
-                </svg>
-              </a>
-            </div>
-          </div>
-          <div class="project-info">
-            <h3>Number Guessing Game</h3>
-            <p>A Number Guessing Game is a simple game where the player tries to guess a randomly generated number within a specified range.</p>
-            <div class="project-tags">
-              <span class="tag">HTML</span>
-              <span class="tag">CSS</span>
-              <span class="tag">JavaScript</span>
-            </div>
-            <a href="https://jhansimalleti264.github.io/Number-Guessing-Game/" target="_blank" rel="noopener noreferrer" class="btn primary">
-              View Project
-            </a>
-          </div>
-        </div>-->
-
         <!-- BOOTSTRAP PROJECTS -->
-        <div class="project-card" data-category="bootstrap">
+        <div class="project-item" data-category="bootstrap">
           <div class="project-image">
             <img src="https://images.pexels.com/photos/3184465/pexels-photo-3184465.jpeg" alt="Bootstrap Job Portal" />
             <div class="project-overlay">
               <a href="https://jhansimalleti264.github.io/Bootstrap/" target="_blank" rel="noopener noreferrer" class="project-link">
-                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-                  <path d="m7 7 10 10-5 5-5-5Z"/>
-                  <path d="m13 7 6 6-6 6"/>
-                  <path d="m7 13 6 6-6 6"/>
+                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                  <path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"/>
+                  <polyline points="15,3 21,3 21,9"/>
+                  <line x1="10" y1="14" x2="21" y2="3"/>
                 </svg>
               </a>
             </div>
           </div>
-          <div class="project-info">
-            <h3>Bootstrap Job Portal</h3>
-            <p>ChooseCareer website, where job seekers can find and apply for jobs, internships and view courses.</p>
-            <div class="project-tags">
-              <span class="tag">Bootstrap</span>
-              <span class="tag">HTML</span>
-              <span class="tag">CSS</span>
-            </div>
-            <a href="https://jhansimalleti264.github.io/Bootstrap/" target="_blank" rel="noopener noreferrer" class="btn primary">
-              View Project
-            </a>
+          <div class="project-content">
+            <h3>ChooseCareer Job Portal</h3>
+            <p>Professional job portal website built with Bootstrap framework</p>
+            <span class="project-tag">Bootstrap</span>
           </div>
         </div>
 
         <!-- WORDPRESS PROJECTS -->
-        <div class="project-card" data-category="wordpress">
+        <div class="project-item" data-category="wordpress">
           <div class="project-image">
             <img src="https://etimg.etb2bimg.com/photo/111601246.cms" alt="Tech Mahindra Blog Theme" />
             <div class="project-overlay">
               <a href="https://dev-jhansi-malleti.pantheonsite.io/" target="_blank" rel="noopener noreferrer" class="project-link">
-                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-                  <path d="m7 7 10 10-5 5-5-5Z"/>
-                  <path d="m13 7 6 6-6 6"/>
-                  <path d="m7 13 6 6-6 6"/>
+                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                  <path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"/>
+                  <polyline points="15,3 21,3 21,9"/>
+                  <line x1="10" y1="14" x2="21" y2="3"/>
                 </svg>
               </a>
             </div>
           </div>
-          <div class="project-info">
+          <div class="project-content">
             <h3>Tech Mahindra Blog Theme</h3>
-            <p>A clean, minimalist WordPress theme designed for Company blogging with customizable features.</p>
-            <div class="project-tags">
-              <span class="tag">WordPress</span>
-              <span class="tag">Theme Development</span>
-            </div>
-            <a href="https://dev-jhansi-malleti.pantheonsite.io/" target="_blank" rel="noopener noreferrer" class="btn primary">
-              View Project
-            </a>
+            <p>Custom WordPress theme for corporate blogging with modern features</p>
+            <span class="project-tag">WordPress</span>
           </div>
         </div>
       </div>
     </div>
   </section>
 
-  
   <section id="contact" class="contact-section">
     <div class="container">
       <h2>Contact Me</h2>
